@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/UxXz1ER4PpGf7p80mesfVnvRZHw</id>
+  <title>arXiv Query: search_query=&amp;id_list=2305.16647&amp;start=0&amp;max_results=10</title>
+  <updated>2026-10-09T15:38:22Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2305.16647" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2305.16647v1</id>
+    <title>Gradient descent-based programming of analog in-memory computing cores</title>
+    <updated>2023-05-26T05:37:24Z</updated>
+    <link href="https://arxiv.org/abs/2305.16647v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.16647v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The precise programming of crossbar arrays of unit-cells is crucial for obtaining high matrix-vector-multiplication (MVM) accuracy in analog in-memory computing (AIMC) cores. We propose a radically different approach based on directly minimizing the MVM error using gradient descent with synthetic random input data. Our method significantly reduces the MVM error compared with conventional unit-cell by unit-cell iterative programming. It also eliminates the need for high-resolution analog-to-digital converters (ADCs) to read the small unit-cell conductance during programming. Our method improves the experimental inference accuracy of ResNet-9 implemented on two phase-change memory (PCM)-based AIMC cores by 1.26%.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-26T05:37:24Z</published>
+    <arxiv:primary_category term="cs.AR"/>
+    <arxiv:journal_ref>2022 International Electron Devices Meeting (IEDM), San Francisco, CA, USA, 2022, pp. 33.1.1-33.1.4</arxiv:journal_ref>
+    <author>
+      <name>Julian Büchel</name>
+    </author>
+    <author>
+      <name>Athanasios Vasilopoulos</name>
+    </author>
+    <author>
+      <name>Benedikt Kersting</name>
+    </author>
+    <author>
+      <name>Frederic Odermatt</name>
+    </author>
+    <author>
+      <name>Kevin Brew</name>
+    </author>
+    <author>
+      <name>Injo Ok</name>
+    </author>
+    <author>
+      <name>Sam Choi</name>
+    </author>
+    <author>
+      <name>Iqbal Saraf</name>
+    </author>
+    <author>
+      <name>Victor Chan</name>
+    </author>
+    <author>
+      <name>Timothy Philip</name>
+    </author>
+    <author>
+      <name>Nicole Saulnier</name>
+    </author>
+    <author>
+      <name>Vijay Narayanan</name>
+    </author>
+    <author>
+      <name>Manuel Le Gallo</name>
+    </author>
+    <author>
+      <name>Abu Sebastian</name>
+    </author>
+    <arxiv:doi>10.1109/IEDM45625.2022.10019486</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/IEDM45625.2022.10019486" title="doi"/>
+  </entry>
+</feed>

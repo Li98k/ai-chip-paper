@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/Fdcxf0XE5z9wOygdKICBn7WgWt8</id>
+  <title>arXiv Query: search_query=&amp;id_list=2511.15950&amp;start=0&amp;max_results=10</title>
+  <updated>2026-10-09T15:38:19Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2511.15950" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2511.15950v1</id>
+    <title>A Scalable NorthPole System with End-to-End Vertical Integration for Low-Latency and Energy-Efficient LLM Inference</title>
+    <updated>2025-11-20T00:53:44Z</updated>
+    <link href="https://arxiv.org/abs/2511.15950v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.15950v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A vertically integrated, end-to-end, research prototype system combines 288 NorthPole neural inference accelerator cards, offline training algorithms, a high-performance runtime stack, and a containerized inference pipeline to deliver a scalable and efficient cloud inference service. The system delivers 115 peta-ops at 4-bit integer precision and 3.7 PB/s of memory bandwidth across 18 2U servers, while consuming only 30 kW of power and weighing 730 kg in a 0.67 m^2 42U rack footprint. The system can run 3 simultaneous instances of the 8-billion-parameter open-source IBM Granite-3.3-8b-instruct model at 2,048 context length with 28 simultaneous users and a per-user inter-token latency of 2.8 ms. The system is scalable, modular, and reconfigurable, supporting various model sizes and context lengths, and is ideal for deploying agentic workflows for enterprise AI applications in existing data center (cloud, on-prem) environments. For example, the system can support 18 instances of a 3-billion-parameter model or a single instance of a 70-billion-parameter model.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-20T00:53:44Z</published>
+    <arxiv:primary_category term="cs.DC"/>
+    <author>
+      <name>Michael V. DeBole</name>
+    </author>
+    <author>
+      <name>Rathinakumar Appuswamy</name>
+    </author>
+    <author>
+      <name>Neil McGlohon</name>
+    </author>
+    <author>
+      <name>Brian Taba</name>
+    </author>
+    <author>
+      <name>Steven K. Esser</name>
+    </author>
+    <author>
+      <name>Filipp Akopyan</name>
+    </author>
+    <author>
+      <name>John V. Arthur</name>
+    </author>
+    <author>
+      <name>Arnon Amir</name>
+    </author>
+    <author>
+      <name>Alexander Andreopoulos</name>
+    </author>
+    <author>
+      <name>Peter J. Carlson</name>
+    </author>
+    <author>
+      <name>Andrew S. Cassidy</name>
+    </author>
+    <author>
+      <name>Pallab Datta</name>
+    </author>
+    <author>
+      <name>Myron D. Flickner</name>
+    </author>
+    <author>
+      <name>Rajamohan Gandhasri</name>
+    </author>
+    <author>
+      <name>Guillaume J. Garreau</name>
+    </author>
+    <author>
+      <name>Megumi Ito</name>
+    </author>
+    <author>
+      <name>Jennifer L. Klamo</name>
+    </author>
+    <author>
+      <name>Jeffrey A. Kusnitz</name>
+    </author>
+    <author>
+      <name>Nathaniel J. McClatchey</name>
+    </author>
+    <author>
+      <name>Jeffrey L. McKinstry</name>
+    </author>
+    <author>
+      <name>Tapan K. Nayak</name>
+    </author>
+    <author>
+      <name>Carlos Ortega Otero</name>
+    </author>
+    <author>
+      <name>Hartmut Penner</name>
+    </author>
+    <author>
+      <name>William P. Risk</name>
+    </author>
+    <author>
+      <name>Jun Sawada</name>
+    </author>
+    <author>
+      <name>Jay Sivagnaname</name>
+    </author>
+    <author>
+      <name>Daniel F. Smith</name>
+    </author>
+    <author>
+      <name>Rafael Sousa</name>
+    </author>
+    <author>
+      <name>Ignacio Terrizzano</name>
+    </author>
+    <author>
+      <name>Takanori Ueda</name>
+    </author>
+    <author>
+      <name>Trent Gray-Donald</name>
+    </author>
+    <author>
+      <name>David Cox</name>
+    </author>
+    <author>
+      <name>Dharmendra S. Modha</name>
+    </author>
+  </entry>
+</feed>

@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/z3P0vTbfccHwVOG5kCbwDwiTHi8</id>
+  <title>arXiv Query: search_query=ti:"TrueNorth"&amp;id_list=&amp;start=0&amp;max_results=6</title>
+  <updated>2026-10-09T14:55:52Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=ti:%22TrueNorth%22&amp;start=0&amp;max_results=6&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>6</opensearch:itemsPerPage>
+  <opensearch:totalResults>3</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1601.04183v1</id>
+    <title>TrueHappiness: Neuromorphic Emotion Recognition on TrueNorth</title>
+    <updated>2016-01-16T17:04:25Z</updated>
+    <link href="https://arxiv.org/abs/1601.04183v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1601.04183v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present an approach to constructing a neuromorphic device that responds to language input by producing neuron spikes in proportion to the strength of the appropriate positive or negative emotional response. Specifically, we perform a fine-grained sentiment analysis task with implementations on two different systems: one using conventional spiking neural network (SNN) simulators and the other one using IBM's Neurosynaptic System TrueNorth. Input words are projected into a high-dimensional semantic space and processed through a fully-connected neural network (FCNN) containing rectified linear units trained via backpropagation. After training, this FCNN is converted to a SNN by substituting the ReLUs with integrate-and-fire neurons. We show that there is practically no performance loss due to conversion to a spiking network on a sentiment analysis test set, i.e. correlations between predictions and human annotations differ by less than 0.02 comparing the original DNN and its spiking equivalent. Additionally, we show that the SNN generated with this technique can be mapped to existing neuromorphic hardware -- in our case, the TrueNorth chip. Mapping to the chip involves 4-bit synaptic weight discretization and adjustment of the neuron thresholds. The resulting end-to-end system can take a user input, i.e. a word in a vocabulary of over 300,000 words, and estimate its sentiment on TrueNorth with a power consumption of approximately 50 uW.</summary>
+    <category term="q-bio.NC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-01-16T17:04:25Z</published>
+    <arxiv:primary_category term="q-bio.NC"/>
+    <author>
+      <name>Peter U. Diehl</name>
+    </author>
+    <author>
+      <name>Bruno U. Pedroni</name>
+    </author>
+    <author>
+      <name>Andrew Cassidy</name>
+    </author>
+    <author>
+      <name>Paul Merolla</name>
+    </author>
+    <author>
+      <name>Emre Neftci</name>
+    </author>
+    <author>
+      <name>Guido Zarrella</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1710.09820v1</id>
+    <title>Spiking Optical Flow for Event-based Sensors Using IBM's TrueNorth Neurosynaptic System</title>
+    <updated>2017-10-26T17:33:34Z</updated>
+    <link href="https://arxiv.org/abs/1710.09820v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1710.09820v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper describes a fully spike-based neural network for optical flow estimation from Dynamic Vision Sensor data. A low power embedded implementation of the method which combines the Asynchronous Time-based Image Sensor with IBM's TrueNorth Neurosynaptic System is presented. The sensor generates spikes with sub-millisecond resolution in response to scene illumination changes. These spike are processed by a spiking neural network running on TrueNorth with a 1 millisecond resolution to accurately determine the order and time difference of spikes from neighboring pixels, and therefore infer the velocity. The spiking neural network is a variant of the Barlow Levick method for optical flow estimation. The system is evaluated on two recordings for which ground truth motion is available, and achieves an Average Endpoint Error of 11% at an estimated power budget of under 80mW for the sensor and computation.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-10-26T17:33:34Z</published>
+    <arxiv:comment>11 pages, 11 figures without biography figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Germain Haessig</name>
+    </author>
+    <author>
+      <name>Andrew Cassidy</name>
+    </author>
+    <author>
+      <name>Rodrigo Alvarez</name>
+    </author>
+    <author>
+      <name>Ryad Benosman</name>
+    </author>
+    <author>
+      <name>Garrick Orchard</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1604.00697v3</id>
+    <title>A New Learning Method for Inference Accuracy, Core Occupation, and Performance Co-optimization on TrueNorth Chip</title>
+    <updated>2016-07-16T05:09:04Z</updated>
+    <link href="https://arxiv.org/abs/1604.00697v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1604.00697v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>IBM TrueNorth chip uses digital spikes to perform neuromorphic computing and achieves ultrahigh execution parallelism and power efficiency. However, in TrueNorth chip, low quantization resolution of the synaptic weights and spikes significantly limits the inference (e.g., classification) accuracy of the deployed neural network model. Existing workaround, i.e., averaging the results over multiple copies instantiated in spatial and temporal domains, rapidly exhausts the hardware resources and slows down the computation. In this work, we propose a novel learning method on TrueNorth platform that constrains the random variance of each computation copy and reduces the number of needed copies. Compared to the existing learning method, our method can achieve up to 68.8% reduction of the required neuro-synaptic cores or 6.5X speedup, with even slightly improved inference accuracy.</summary>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-04-03T22:44:00Z</published>
+    <arxiv:comment>6 pages; 9 figures; DAC 2016</arxiv:comment>
+    <arxiv:primary_category term="cs.NE"/>
+    <author>
+      <name>Wei Wen</name>
+    </author>
+    <author>
+      <name>Chunpeng Wu</name>
+    </author>
+    <author>
+      <name>Yandan Wang</name>
+    </author>
+    <author>
+      <name>Kent Nixon</name>
+    </author>
+    <author>
+      <name>Qing Wu</name>
+    </author>
+    <author>
+      <name>Mark Barnell</name>
+    </author>
+    <author>
+      <name>Hai Li</name>
+    </author>
+    <author>
+      <name>Yiran Chen</name>
+    </author>
+    <arxiv:doi>10.1145/2897937.2897968</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/2897937.2897968" title="doi"/>
+  </entry>
+</feed>

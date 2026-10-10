@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/yDRA7aeVmrFpakJYludw+CnUX7Q</id>
+  <title>arXiv Query: search_query=abs:"analog in-memory" AND abs:"precision" AND abs:"limit"&amp;id_list=&amp;start=0&amp;max_results=6</title>
+  <updated>2026-10-09T14:56:00Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22analog+in-memory%22+AND+(abs:%22precision%22+AND+abs:%22limit%22)&amp;start=0&amp;max_results=6&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>6</opensearch:itemsPerPage>
+  <opensearch:totalResults>12</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2302.06417v1</id>
+    <title>Analog, In-memory Compute Architectures for Artificial Intelligence</title>
+    <updated>2023-01-13T21:04:16Z</updated>
+    <link href="https://arxiv.org/abs/2302.06417v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2302.06417v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper presents an analysis of the fundamental limits on energy efficiency in both digital and analog in-memory computing architectures, and compares their performance to single instruction, single data (scalar) machines specifically in the context of machine inference. The focus of the analysis is on how efficiency scales with the size, arithmetic intensity, and bit precision of the computation to be performed. It is shown that analog, in-memory computing architectures can approach arbitrarily high energy efficiency as both the problem size and processor size scales.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-01-13T21:04:16Z</published>
+    <arxiv:comment>17 pages, 10 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Patrick Bowen</name>
+    </author>
+    <author>
+      <name>Guy Regev</name>
+    </author>
+    <author>
+      <name>Nir Regev</name>
+    </author>
+    <author>
+      <name>Bruno Pedroni</name>
+    </author>
+    <author>
+      <name>Edward Hanson</name>
+    </author>
+    <author>
+      <name>Yiran Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.02672v1</id>
+    <title>Heterogeneous Mapping for Analog In-Memory Computing Accelerators: A Unified Workflow</title>
+    <updated>2026-06-01T12:17:51Z</updated>
+    <link href="https://arxiv.org/abs/2606.02672v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.02672v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Analog In-Memory Computing (AIMC) accelerators execute matrix-vector multiplications directly within memory arrays, reducing data movement and improving DNN inference efficiency. Their limited effective precision motivates heterogeneous architectures that combine analog compute tiles with digital processing units. This letter classifies existing methods for partitioning DNN workloads across these resources by mapping granularity, optimization strategy, and model support, and distills them into a unified four-stage workflow. To demonstrate the workflow on a model class not yet addressed by existing methods, we apply its first two stages to GPT-2, producing the first AIMC-specific precision sensitivity profile for a decoder-only transformer. Sensitivity is dominated by 4 of 49 projections, with the first decoder block's attention output dominating by an order of magnitude. This suggests that projection-level mapping and selective digital execution of early-block and output-facing projections are important for reliable decoder-transformer deployment on AIMC hardware.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-01T12:17:51Z</published>
+    <arxiv:comment>Accepted by IEEE Computer Architecture Letters</arxiv:comment>
+    <arxiv:primary_category term="cs.AR"/>
+    <arxiv:journal_ref>IEEE Computer Architecture Letters 2026</arxiv:journal_ref>
+    <author>
+      <name>Corey Lammie</name>
+    </author>
+    <arxiv:doi>10.1109/LCA.2026.3699929</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/LCA.2026.3699929" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.09776v2</id>
+    <title>Compute SNR-Optimal Analog-to-Digital Converters for Analog In-Memory Computing</title>
+    <updated>2025-07-15T02:44:11Z</updated>
+    <link href="https://arxiv.org/abs/2507.09776v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.09776v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Analog in-memory computing (AIMC) is an energy-efficient alternative to digital architectures for accelerating machine learning and signal processing workloads. However, its energy efficiency is limited by the high energy cost of the column analog-to-digital converters (ADCs). Reducing the ADC precision is an effective approach to lowering its energy cost. However, doing so also reduces the AIMC's computational accuracy thereby making it critical to identify the minimum precision required to meet a target accuracy. Prior works overestimate the ADC precision requirements by modeling quantization error as input-independent noise, maximizing the signal-to-quantization-noise ratio (SQNR), and ignoring the discrete nature of ideal pre-ADC signal. We address these limitations by developing analytical expressions for estimating the compute signal-to-noise ratio (CSNR), a true metric of accuracy for AIMCs, and propose CACTUS, an algorithm to obtain CSNR-optimal ADC parameters. Using a circuit-aware behavioral model of an SRAM-based AIMC in a 28nm CMOS process, we show that for a 256-dimensional binary dot product, CACTUS reduces the ADC precision requirements by 3b while achieving 6dB higher CSNR over prior methods. We also delineate operating conditions under which our proposed CSNR-optimal ADCs outperform conventional SQNR-optimal ADCs.</summary>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-13T20:13:20Z</published>
+    <arxiv:comment>Code available at: https://github.com/mihirvk2/CSNR-optimal-ADC</arxiv:comment>
+    <arxiv:primary_category term="eess.SP"/>
+    <author>
+      <name>Mihir Kavishwar</name>
+    </author>
+    <author>
+      <name>Naresh Shanbhag</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.02516v1</id>
+    <title>In-memory Training on Analog Devices with Limited Conductance States via Multi-tile Residual Learning</title>
+    <updated>2025-10-02T19:44:25Z</updated>
+    <link href="https://arxiv.org/abs/2510.02516v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.02516v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Analog in-memory computing (AIMC) accelerators enable efficient deep neural network computation directly within memory using resistive crossbar arrays, where model parameters are represented by the conductance states of memristive devices. However, effective in-memory training typically requires at least 8-bit conductance states to match digital baselines. Realizing such fine-grained states is costly and often requires complex noise mitigation techniques that increase circuit complexity and energy consumption. In practice, many promising memristive devices such as ReRAM offer only about 4-bit resolution due to fabrication constraints, and this limited update precision substantially degrades training accuracy. To enable on-chip training with these limited-state devices, this paper proposes a \emph{residual learning} framework that sequentially learns on multiple crossbar tiles to compensate the residual errors from low-precision weight updates. Our theoretical analysis shows that the optimality gap shrinks with the number of tiles and achieves a linear convergence rate. Experiments on standard image classification benchmarks demonstrate that our method consistently outperforms state-of-the-art in-memory analog training strategies under limited-state settings, while incurring only moderate hardware overhead as confirmed by our cost analysis.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-02T19:44:25Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Jindan Li</name>
+    </author>
+    <author>
+      <name>Zhaoxian Wu</name>
+    </author>
+    <author>
+      <name>Gaowen Liu</name>
+    </author>
+    <author>
+      <name>Tayfun Gokmen</name>
+    </author>
+    <author>
+      <name>Tianyi Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.24721v1</id>
+    <title>Running Conventional Automatic Speech Recognition on Memristor Hardware: A Simulated Approach</title>
+    <updated>2025-05-30T15:42:41Z</updated>
+    <link href="https://arxiv.org/abs/2505.24721v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.24721v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Memristor-based hardware offers new possibilities for energy-efficient machine learning (ML) by providing analog in-memory matrix multiplication. Current hardware prototypes cannot fit large neural networks, and related literature covers only small ML models for tasks like MNIST or single word recognition. Simulation can be used to explore how hardware properties affect larger models, but existing software assumes simplified hardware. We propose a PyTorch-based library based on "Synaptogen" to simulate neural network execution with accurately captured memristor hardware properties. For the first time, we show how an ML system with millions of parameters would behave on memristor hardware, using a Conformer trained on the speech recognition task TED-LIUMv2 as example. With adjusted quantization-aware training, we limit the relative degradation in word error rate to 25% when using a 3-bit weight precision to execute linear operations via simulated analog computation.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-30T15:42:41Z</published>
+    <arxiv:comment>Accepted for the Blue Sky track at Interspeech 2025</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Nick Rossenbach</name>
+    </author>
+    <author>
+      <name>Benedikt Hilmes</name>
+    </author>
+    <author>
+      <name>Leon Brackmann</name>
+    </author>
+    <author>
+      <name>Moritz Gunz</name>
+    </author>
+    <author>
+      <name>Ralf Schlüter</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.11134v1</id>
+    <title>Fault-Free Analog Computing with Imperfect Hardware</title>
+    <updated>2025-07-15T09:37:05Z</updated>
+    <link href="https://arxiv.org/abs/2507.11134v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.11134v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The growing demand for edge computing and AI drives research into analog in-memory computing using memristors, which overcome data movement bottlenecks by computing directly within memory. However, device failures and variations critically limit analog systems' precision and reliability. Existing fault-tolerance techniques, such as redundancy and retraining, are often inadequate for high-precision applications or scenarios requiring fixed matrices and privacy preservation. Here, we introduce and experimentally demonstrate a fault-free matrix representation where target matrices are decomposed into products of two adjustable sub-matrices programmed onto analog hardware. This indirect, adaptive representation enables mathematical optimization to bypass faulty devices and eliminate differential pairs, significantly enhancing computational density. Our memristor-based system achieved &gt;99.999% cosine similarity for a Discrete Fourier Transform matrix despite 39% device fault rate, a fidelity unattainable with conventional direct representation, which fails with single device faults (0.01% rate). We demonstrated 56-fold bit-error-rate reduction in wireless communication and &gt;196% density with 179% energy efficiency improvements compared to state-of-the-art techniques. This method, validated on memristors, applies broadly to emerging memories and non-electrical computing substrates, showing that device yield is no longer the primary bottleneck in analog computing hardware.</summary>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-15T09:37:05Z</published>
+    <arxiv:primary_category term="cs.ET"/>
+    <author>
+      <name>Zhicheng Xu</name>
+    </author>
+    <author>
+      <name>Jiawei Liu</name>
+    </author>
+    <author>
+      <name>Sitao Huang</name>
+    </author>
+    <author>
+      <name>Zefan Li</name>
+    </author>
+    <author>
+      <name>Shengbo Wang</name>
+    </author>
+    <author>
+      <name>Bo Wen</name>
+    </author>
+    <author>
+      <name>Ruibin Mao</name>
+    </author>
+    <author>
+      <name>Mingrui Jiang</name>
+    </author>
+    <author>
+      <name>Giacomo Pedretti</name>
+    </author>
+    <author>
+      <name>Jim Ignowski</name>
+    </author>
+    <author>
+      <name>Kaibin Huang</name>
+    </author>
+    <author>
+      <name>Can Li</name>
+    </author>
+  </entry>
+</feed>

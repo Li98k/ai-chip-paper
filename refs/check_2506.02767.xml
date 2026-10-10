@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/bjLPxpKVBZEfEGxUb7Ats2RPMRE</id>
+  <title>arXiv Query: search_query=&amp;id_list=2506.02767&amp;start=0&amp;max_results=10</title>
+  <updated>2026-10-09T15:34:49Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2506.02767" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2506.02767v1</id>
+    <title>Accelerating Model-Based Reinforcement Learning using Non-Linear Trajectory Optimization</title>
+    <updated>2025-06-03T11:30:59Z</updated>
+    <link href="https://arxiv.org/abs/2506.02767v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.02767v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper addresses the slow policy optimization convergence of Monte Carlo Probabilistic Inference for Learning Control (MC-PILCO), a state-of-the-art model-based reinforcement learning (MBRL) algorithm, by integrating it with iterative Linear Quadratic Regulator (iLQR), a fast trajectory optimization method suitable for nonlinear systems. The proposed method, Exploration-Boosted MC-PILCO (EB-MC-PILCO), leverages iLQR to generate informative, exploratory trajectories and initialize the policy, significantly reducing the number of required optimization steps. Experiments on the cart-pole task demonstrate that EB-MC-PILCO accelerates convergence compared to standard MC-PILCO, achieving up to $\bm{45.9\%}$ reduction in execution time when both methods solve the task in four trials. EB-MC-PILCO also maintains a $\bm{100\%}$ success rate across trials while solving the task faster, even in cases where MC-PILCO converges in fewer iterations.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-03T11:30:59Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Marco Calì</name>
+    </author>
+    <author>
+      <name>Giulio Giacomuzzo</name>
+    </author>
+    <author>
+      <name>Ruggero Carli</name>
+    </author>
+    <author>
+      <name>Alberto Dalla Libera</name>
+    </author>
+  </entry>
+</feed>

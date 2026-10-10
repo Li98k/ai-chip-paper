@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/TDGXf8C9UV9WqOe94IeqrqlkmLs</id>
+  <title>arXiv Query: search_query=all:"in-memory computing" AND all:"LLM" AND all:"inference"&amp;id_list=&amp;start=0&amp;max_results=8</title>
+  <updated>2026-10-09T14:16:30Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22in-memory+computing%22+AND+(all:%22LLM%22+AND+all:%22inference%22)&amp;start=0&amp;max_results=8&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>8</opensearch:itemsPerPage>
+  <opensearch:totalResults>20</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2511.04036v1</id>
+    <title>PICNIC: Silicon Photonic Interconnected Chiplets with Computational Network and In-memory Computing for LLM Inference Acceleration</title>
+    <updated>2025-11-06T04:15:20Z</updated>
+    <link href="https://arxiv.org/abs/2511.04036v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.04036v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper presents a 3D-stacked chiplets based large language model (LLM) inference accelerator, consisting of non-volatile in-memory-computing processing elements (PEs) and Inter-PE Computational Network (IPCN), interconnected via silicon photonic to effectively address the communication bottlenecks. A LLM mapping scheme was developed to optimize hardware scheduling and workload mapping. Simulation results show it achieves $3.95\times$ speedup and $30\times$ efficiency improvement over the Nvidia A100 before chiplet clustering and power gating scheme (CCPG). Additionally, the system achieves further scalability and efficiency improvement with the implementation of CCPG to accommodate larger models, attaining $57\times$ efficiency improvement over Nvidia H100 at similar throughput.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-06T04:15:20Z</published>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Yue Jiet Chong</name>
+    </author>
+    <author>
+      <name>Yimin Wang</name>
+    </author>
+    <author>
+      <name>Zhen Wu</name>
+    </author>
+    <author>
+      <name>Xuanyao Fong</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.10372v1</id>
+    <title>MCBP: A Memory-Compute Efficient LLM Inference Accelerator Leveraging Bit-Slice-enabled Sparsity and Repetitiveness</title>
+    <updated>2025-09-12T16:05:27Z</updated>
+    <link href="https://arxiv.org/abs/2509.10372v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.10372v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) face significant inference latency due to inefficiencies in GEMM operations, weight access, and KV cache access, especially in real-time scenarios. This highlights the need for a versatile compute-memory efficient accelerator. Unfortunately, existing Transformer accelerators struggle to address both aspects simultaneously, as they focus on value-level processing, missing fine-grained opportunities to optimize computation and memory collaboratively. This paper introduces MCBP, a bit-grained compute-memory efficient algorithm-hardware co-design that leverages bit-slice (BS) enabled repetitiveness and sparsity to accelerate LLM inference. MCBP features three key innovations: 1) BS-repetitiveness-enabled computation reduction (BRCR), which eliminates redundant GEMM computations via leveraging redundancy hidden among BS vectors; 2) BS-sparsity-enabled two-state coding (BSTC), which reduces weight access via exploiting significant sparsity in high-order bit-slice weight; 3) Bit-grained progressive prediction (BGPP), which reduces KV cache access by leveraging early-termination-based bit-grained prediction. These techniques, supported by custom accelerator designs, effectively alleviate the burden in GEMM, weight access, and KV cache access. Extensive experiments on 26 benchmarks show that MCBP achieves 9.43x speed up and 31.1x higher energy efficiency than Nvidia A100 GPU. Compared to SOTA Transformer accelerators, MCBP achieves 35x, 5.2x and 3.2x energy saving than Spatten, FACT and SOFA, respectively.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-12T16:05:27Z</published>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Huizheng Wang</name>
+    </author>
+    <author>
+      <name>Zichuan Wang</name>
+    </author>
+    <author>
+      <name>Zhiheng Yue</name>
+    </author>
+    <author>
+      <name>Yousheng Long</name>
+    </author>
+    <author>
+      <name>Taiquan Wei</name>
+    </author>
+    <author>
+      <name>Jianxun Yang</name>
+    </author>
+    <author>
+      <name>Yang Wang</name>
+    </author>
+    <author>
+      <name>Chao Li</name>
+    </author>
+    <author>
+      <name>Shaojun Wei</name>
+    </author>
+    <author>
+      <name>Yang Hu</name>
+    </author>
+    <author>
+      <name>Shouyi Yin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.35586v1</id>
+    <title>IMC-CLINIC: Coupled Loss-Informed Newton Iterations for Clipping in Analog In-Memory Computing</title>
+    <updated>2026-09-28T16:38:47Z</updated>
+    <link href="https://arxiv.org/abs/2609.35586v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.35586v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Analog in-memory computing (IMC) offers a promising path toward energy-efficient large language model (LLM) inference by executing matrix multiplications (MatMul) directly within memory arrays in the analog domain. Its efficiency, however, comes with an additional source of error: limited-precision analog-to-digital converters (ADCs) quantize accumulated analog partial sums, introducing output-side error distinct from conventional activation and weight quantization at the MatMul inputs. Clipping can mitigate both operand and ADC quantization errors, but the optimal clipping factors must jointly balance activation rounding and clipping, weight rounding and clipping, and ADC quantization. Existing clipping methods, designed for digital quantization, do not explicitly optimize these coupled sources of IMC error and often rely on costly search-based calibration. We introduce IMC-CLINIC (Coupled Loss-Informed Newton Iterations for Clipping), a clipping calibration framework based on an analytical surrogate for IMC MatMul output error. The surrogate jointly models operand quantization, accumulated clipping-induced bias, and ADC quantization, enabling efficient evaluation of its gradient and approximate curvature from a small calibration set. IMC-CLINIC jointly optimizes activation and weight clipping factors using a safeguarded Newton-type method. Across multiple models and datasets, it improves average zero-shot accuracy by 6.5-11.5 percentage points over the grid search baseline while reducing calibration time by factors of 10.0-12.1. Its analytical surrogate closely tracks empirical IMC output error, and its optimizer is certified within 1% of the global optimum under the loss objective across all projections on two representative models.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-28T16:38:47Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Yung-Chin Chen</name>
+    </author>
+    <author>
+      <name>Chia-Yu Chen</name>
+    </author>
+    <author>
+      <name>Naveen Verma</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.14781v1</id>
+    <title>LEAP: LLM Inference on Scalable PIM-NoC Architecture with Balanced Dataflow and Fine-Grained Parallelism</title>
+    <updated>2025-09-18T09:34:05Z</updated>
+    <link href="https://arxiv.org/abs/2509.14781v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.14781v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language model (LLM) inference has been a prevalent demand in daily life and industries. The large tensor sizes and computing complexities in LLMs have brought challenges to memory, computing, and databus. This paper proposes a computation/memory/communication co-designed non-von Neumann accelerator by aggregating processing-in-memory (PIM) and computational network-on-chip (NoC), termed LEAP. The matrix multiplications in LLMs are assigned to PIM or NoC based on the data dynamicity to maximize data locality. Model partition and mapping are optimized by heuristic design space exploration. Dedicated fine-grained parallelism and tiling techniques enable high-throughput dataflow across the distributed resources in PIM and NoC. The architecture is evaluated on Llama 1B/8B/13B models and shows $\sim$2.55$\times$ throughput (tokens/sec) improvement and $\sim$71.94$\times$ energy efficiency (tokens/Joule) boost compared to the A100 GPU.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-18T09:34:05Z</published>
+    <arxiv:comment>Accepted to the 2025 International Conference on Computer-Aided Design (ICCAD'25)</arxiv:comment>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Yimin Wang</name>
+    </author>
+    <author>
+      <name>Yue Jiet Chong</name>
+    </author>
+    <author>
+      <name>Xuanyao Fong</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.17728v1</id>
+    <title>LLM Inference Acceleration via Efficient Operation Fusion</title>
+    <updated>2025-02-24T23:42:37Z</updated>
+    <link href="https://arxiv.org/abs/2502.17728v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.17728v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The rapid development of the Transformer-based Large Language Models (LLMs) in recent years has been closely linked to their ever-growing and already enormous sizes. Many LLMs contain hundreds of billions of parameters and require dedicated hardware resources for training and inference. One of the key challenges inherent to the Transformer architecture is the requirement to support numerous non-linear transformations that involves normalization. For instance, each decoder block typically contains at least one Softmax operation and two Layernorms. The computation of the corresponding normalization scaling factors becomes a major bottleneck as it requires spatial collective operations. In other words, when it comes to the computation of denominators for Softmax and Layernorm, all vector elements must be aggregated into a single location, requiring significant communication. These collective operations slow down inference on Transformers by approximately 20%, defeating the whole purpose of distributed in-memory compute. In this work, we propose an extremely efficient technique that can completely hide the overhead caused by such collective operations. Note that each Softmax and Layernorm operation is typically followed by a linear layer. Since non-linear and linear operations are performed on different hardware engines, they can be easily parallelized once the algebra allows such commutation. By leveraging the inherent properties of linear operations, we can defer the normalization of the preceding Softmax and Layernorm until after the linear layer is computed. Now we can compute the collective scaling factors concurrently with the matrix multiplication and completely hide the latency of the former behind the latter. Such parallelization preserves the numerical accuracy while significantly improving the hardware utilization and reducing the overall latency.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-24T23:42:37Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Mahsa Salmani</name>
+    </author>
+    <author>
+      <name>Ilya Soloveychik</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.16653v2</id>
+    <title>H2EAL: Hybrid-Bonding Architecture with Hybrid Sparse Attention for Efficient Long-Context LLM Inference</title>
+    <updated>2025-12-08T13:48:55Z</updated>
+    <link href="https://arxiv.org/abs/2508.16653v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.16653v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) have demonstrated remarkable proficiency in a wide range of natural language processing applications. However, the high energy and latency overhead induced by the KV cache limits the edge deployment, especially for long contexts. Emerging hybrid bonding (HB) technology has been proposed as a promising alternative to conventional near-memory processing (NMP) architectures, offering improved bandwidth efficiency and lower power consumption while exhibiting characteristics of distributed memory. In this paper, we propose H2EAL, a hybrid bonding-based accelerator with sparse attention algorithm-hardware co-design for efficient LLM inference at the edge. At the algorithm level, we propose a hybrid sparse attention scheme with static and dynamic sparsity for different heads to fully leverage the sparsity with high accuracy. At the hardware level, we co-design the hardware to support hybrid sparse attention and propose memory-compute co-placement to address the distributed memory bottleneck. Since different attention heads exhibit different sparse patterns and the attention structure often mismatches the HB architecture, we further develop a load-balancing scheduler with parallel tiled attention to address workload imbalance and optimize the mapping strategy. Extensive experiments demonstrate H2EAL achieves 5.20~48.21x speedup and 6.22~73.48x energy efficiency improvement over baseline HB implementation, with a negligible average accuracy drop of 0.87% on multiple benchmarks.</summary>
+    <category term="cs.PF" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-20T03:42:37Z</published>
+    <arxiv:comment>International Conference on Computer-Aided Design (ICCAD) 2025</arxiv:comment>
+    <arxiv:primary_category term="cs.PF"/>
+    <author>
+      <name>Zizhuo Fu</name>
+    </author>
+    <author>
+      <name>Xiaotian Guo</name>
+    </author>
+    <author>
+      <name>Wenxuan Zeng</name>
+    </author>
+    <author>
+      <name>Shuzhang Zhong</name>
+    </author>
+    <author>
+      <name>Yadong Zhang</name>
+    </author>
+    <author>
+      <name>Peiyu Chen</name>
+    </author>
+    <author>
+      <name>Runsheng Wang</name>
+    </author>
+    <author>
+      <name>Le Ye</name>
+    </author>
+    <author>
+      <name>Meng Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.29002v3</id>
+    <title>Understand and Accelerate Memory Processing Pipeline for Large Language Model Inference</title>
+    <updated>2026-05-30T00:45:53Z</updated>
+    <link href="https://arxiv.org/abs/2603.29002v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.29002v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Modern large language models (LLMs) increasingly depends on efficient long-context processing and generation mechanisms, including sparse attention, retrieval-augmented generation (RAG), and compressed contextual memory, to support complex reasoning. We show that these optimizations can be unified into a four-step memory processing pipeline: Prepare Memory, Compute Relevancy, Retrieval, and Apply to Inference. Through systematic profiling, we identify a 22%-97% memory processing overhead in LLM inference and strong heterogeneity in its computational characteristics. Motivated by this insight, we argue that \textbf{heterogeneous systems} are well-suited to accelerate memory processing and thus end-to-end inference. We demonstrate this approach on a GPU-FPGA system by offloading sparse, irregular, and memory-bounded operations to FPGAs while retaining compute-intensive operations on GPUs. Evaluated on an AMD MI210 GPU and an Alveo U55C FPGA, our system is up to $2.2\times$ faster and achieves up to $4.7\times$ less energy across multiple LLM inference optimizations than the GPU baseline (similar results hold on NVIDIA A100). These results establish heterogeneous systems as a practical direction for efficient LLM memory processing and inform future heterogeneous hardware design.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-30T21:03:39Z</published>
+    <arxiv:comment>Accepted by ICML 2026. Code: https://github.com/OswaldHe/HeteroLLM</arxiv:comment>
+    <arxiv:primary_category term="cs.DC"/>
+    <author>
+      <name>Zifan He</name>
+    </author>
+    <author>
+      <name>Rui Ma</name>
+    </author>
+    <author>
+      <name>Yizhou Sun</name>
+    </author>
+    <author>
+      <name>Jason Cong</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.16849v1</id>
+    <title>SpaceMoE: Towards Orbital General Intelligence with Distributed Mixture-of-Experts Inference</title>
+    <updated>2026-05-16T07:15:47Z</updated>
+    <link href="https://arxiv.org/abs/2605.16849v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.16849v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As satellite networks evolve to support increasingly diverse services and artificial general intelligence (AGI), large language models (LLMs) are emerging as a critical foundation for future space systems. However, deploying LLMs on satellites is hindered by stringent constraints on onboard memory, computation, and energy. In this context, the mixture-of-experts (MoE) architecture emerges as a promising solution, leveraging sparse expert activation to enable scalable model inference. By harnessing the architectural advantages of MoE, this article provides a comprehensive overview of SpaceMoE, a new paradigm for distributed MoE inference in satellite networks. We first review recent industrial progress and emerging standardization trends that motivate the evolution toward space AGI systems. Then, we introduce the fundamentals and architectural evolution of SpaceMoE. Subsequently, we discuss three fundamental design problems in SpaceMoE, namely expert placement, expert selection, and hidden-state transmission and routing, highlighting how satellite-specific factors such as dynamic topology, battery degradation, and thermal limits fundamentally reshape their solutions. Finally, we outline promising research directions for realizing scalable, efficient, and sustainable on-orbit MoE inference in future satellite networks.</summary>
+    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-16T07:15:47Z</published>
+    <arxiv:comment>7 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.NI"/>
+    <author>
+      <name>Qian Chen</name>
+    </author>
+    <author>
+      <name>Xianhao Chen</name>
+    </author>
+    <author>
+      <name>Min Sheng</name>
+    </author>
+    <author>
+      <name>Kaibin Huang</name>
+    </author>
+  </entry>
+</feed>

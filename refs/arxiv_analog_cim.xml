@@ -1,0 +1,505 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/VkHoHJ4HpR0a79RDBq15TsduODo</id>
+  <title>arXiv Query: search_query=all:"analog in-memory computing" AND all:"matrix-vector multiplication"&amp;id_list=&amp;start=0&amp;max_results=12</title>
+  <updated>2026-10-09T14:15:56Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22analog+in-memory+computing%22+AND+all:%22matrix-vector+multiplication%22&amp;start=0&amp;max_results=12&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>12</opensearch:itemsPerPage>
+  <opensearch:totalResults>13</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2305.16647v1</id>
+    <title>Gradient descent-based programming of analog in-memory computing cores</title>
+    <updated>2023-05-26T05:37:24Z</updated>
+    <link href="https://arxiv.org/abs/2305.16647v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.16647v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The precise programming of crossbar arrays of unit-cells is crucial for obtaining high matrix-vector-multiplication (MVM) accuracy in analog in-memory computing (AIMC) cores. We propose a radically different approach based on directly minimizing the MVM error using gradient descent with synthetic random input data. Our method significantly reduces the MVM error compared with conventional unit-cell by unit-cell iterative programming. It also eliminates the need for high-resolution analog-to-digital converters (ADCs) to read the small unit-cell conductance during programming. Our method improves the experimental inference accuracy of ResNet-9 implemented on two phase-change memory (PCM)-based AIMC cores by 1.26%.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-26T05:37:24Z</published>
+    <arxiv:primary_category term="cs.AR"/>
+    <arxiv:journal_ref>2022 International Electron Devices Meeting (IEDM), San Francisco, CA, USA, 2022, pp. 33.1.1-33.1.4</arxiv:journal_ref>
+    <author>
+      <name>Julian Büchel</name>
+    </author>
+    <author>
+      <name>Athanasios Vasilopoulos</name>
+    </author>
+    <author>
+      <name>Benedikt Kersting</name>
+    </author>
+    <author>
+      <name>Frederic Odermatt</name>
+    </author>
+    <author>
+      <name>Kevin Brew</name>
+    </author>
+    <author>
+      <name>Injo Ok</name>
+    </author>
+    <author>
+      <name>Sam Choi</name>
+    </author>
+    <author>
+      <name>Iqbal Saraf</name>
+    </author>
+    <author>
+      <name>Victor Chan</name>
+    </author>
+    <author>
+      <name>Timothy Philip</name>
+    </author>
+    <author>
+      <name>Nicole Saulnier</name>
+    </author>
+    <author>
+      <name>Vijay Narayanan</name>
+    </author>
+    <author>
+      <name>Manuel Le Gallo</name>
+    </author>
+    <author>
+      <name>Abu Sebastian</name>
+    </author>
+    <arxiv:doi>10.1109/IEDM45625.2022.10019486</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/IEDM45625.2022.10019486" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.02672v1</id>
+    <title>Heterogeneous Mapping for Analog In-Memory Computing Accelerators: A Unified Workflow</title>
+    <updated>2026-06-01T12:17:51Z</updated>
+    <link href="https://arxiv.org/abs/2606.02672v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.02672v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Analog In-Memory Computing (AIMC) accelerators execute matrix-vector multiplications directly within memory arrays, reducing data movement and improving DNN inference efficiency. Their limited effective precision motivates heterogeneous architectures that combine analog compute tiles with digital processing units. This letter classifies existing methods for partitioning DNN workloads across these resources by mapping granularity, optimization strategy, and model support, and distills them into a unified four-stage workflow. To demonstrate the workflow on a model class not yet addressed by existing methods, we apply its first two stages to GPT-2, producing the first AIMC-specific precision sensitivity profile for a decoder-only transformer. Sensitivity is dominated by 4 of 49 projections, with the first decoder block's attention output dominating by an order of magnitude. This suggests that projection-level mapping and selective digital execution of early-block and output-facing projections are important for reliable decoder-transformer deployment on AIMC hardware.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-01T12:17:51Z</published>
+    <arxiv:comment>Accepted by IEEE Computer Architecture Letters</arxiv:comment>
+    <arxiv:primary_category term="cs.AR"/>
+    <arxiv:journal_ref>IEEE Computer Architecture Letters 2026</arxiv:journal_ref>
+    <author>
+      <name>Corey Lammie</name>
+    </author>
+    <arxiv:doi>10.1109/LCA.2026.3699929</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/LCA.2026.3699929" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2211.12877v1</id>
+    <title>End-to-End DNN Inference on a Massively Parallel Analog In Memory Computing Architecture</title>
+    <updated>2022-11-23T11:32:07Z</updated>
+    <link href="https://arxiv.org/abs/2211.12877v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2211.12877v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The demand for computation resources and energy efficiency of Convolutional Neural Networks (CNN) applications requires a new paradigm to overcome the "Memory Wall". Analog In-Memory Computing (AIMC) is a promising paradigm since it performs matrix-vector multiplications, the critical kernel of many ML applications, in-place in the analog domain within memory arrays structured as crossbars of memory cells. However, several factors limit the full exploitation of this technology, including the physical fabrication of the crossbar devices, which constrain the memory capacity of a single array. Multi-AIMC architectures have been proposed to overcome this limitation, but they have been demonstrated only for tiny and custom CNNs or performing some layers off-chip. In this work, we present the full inference of an end-to-end ResNet-18 DNN on a 512-cluster heterogeneous architecture coupling a mix of AIMC cores and digital RISC-V cores, achieving up to 20.2 TOPS. Moreover, we analyze the mapping of the network on the available non-volatile cells, compare it with state-of-the-art models, and derive guidelines for next-generation many-core architectures based on AIMC devices.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-11-23T11:32:07Z</published>
+    <arxiv:primary_category term="cs.DC"/>
+    <author>
+      <name>Nazareno Bruschi</name>
+    </author>
+    <author>
+      <name>Giuseppe Tagliavini</name>
+    </author>
+    <author>
+      <name>Angelo Garofalo</name>
+    </author>
+    <author>
+      <name>Francesco Conti</name>
+    </author>
+    <author>
+      <name>Irem Boybat</name>
+    </author>
+    <author>
+      <name>Luca Benini</name>
+    </author>
+    <author>
+      <name>Davide Rossi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2201.12480v1</id>
+    <title>Interconnect Parasitics and Partitioning in Fully-Analog In-Memory Computing Architectures</title>
+    <updated>2022-01-29T02:29:27Z</updated>
+    <link href="https://arxiv.org/abs/2201.12480v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2201.12480v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Fully-analog in-memory computing (IMC) architectures that implement both matrix-vector multiplication and non-linear vector operations within the same memory array have shown promising performance benefits over conventional IMC systems due to the removal of energy-hungry signal conversion units. However, maintaining the computation in the analog domain for the entire deep neural network (DNN) comes with potential sensitivity to interconnect parasitics. Thus, in this paper, we investigate the effect of wire parasitic resistance and capacitance on the accuracy of DNN models deployed on fully-analog IMC architectures. Moreover, we propose a partitioning mechanism to alleviate the impact of the parasitic while keeping the computation in the analog domain through dividing large arrays into multiple partitions. The SPICE circuit simulation results for a 400 X 120 X 84 X 10 DNN model deployed on a fully-analog IMC circuit show that a 94.84% accuracy could be achieved for MNIST classification application with 16, 8, and 8 horizontal partitions, as well as 8, 8, and 1 vertical partitions for first, second, and third layers of the DNN, respectively, which is comparable to the ~97% accuracy realized by digital implementation on CPU. It is shown that accuracy benefits are achieved at the cost of higher power consumption due to the extra circuitry required for handling partitioning.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-01-29T02:29:27Z</published>
+    <arxiv:comment>5 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.AR"/>
+    <arxiv:journal_ref>2022 IEEE International Symposium on Circuits and Systems (ISCAS), Austin, TX, USA, 2022, pp. 389-393</arxiv:journal_ref>
+    <author>
+      <name>Md Hasibul Amin</name>
+    </author>
+    <author>
+      <name>Mohammed Elbtity</name>
+    </author>
+    <author>
+      <name>Ramtin Zand</name>
+    </author>
+    <arxiv:doi>10.1109/ISCAS48785.2022.9937884</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/ISCAS48785.2022.9937884" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2110.03937v1</id>
+    <title>Proposal of Analog In-Memory Computing with Magnified Tunnel Magnetoresistance Ratio and Universal STT-MRAM Cell</title>
+    <updated>2021-10-08T07:13:30Z</updated>
+    <link href="https://arxiv.org/abs/2110.03937v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2110.03937v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In-memory computing (IMC) is an effectual solution for energy-efficient artificial intelligence applications. Analog IMC amortizes the power consumption of multiple sensing amplifiers with analog-to-digital converter (ADC), and simultaneously completes the calculation of multi-line data with high parallelism degree. Based on a universal one-transistor one-magnetic tunnel junction (MTJ) spin transfer torque magnetic RAM (STT-MRAM) cell, this paper demonstrates a novel tunneling magnetoresistance (TMR) ratio magnifying method to realize analog IMC. Previous concerns include low TMR ratio and analog calculation nonlinearity are addressed using device-circuit interaction. Peripheral circuits are minimally modified to enable in-memory matrix-vector multiplication. A current mirror with feedback structure is implemented to enhance analog computing linearity and calculation accuracy. The proposed design maximumly supports 1024 2-bit input and 1-bit weight multiply-and-accumulate (MAC) computations simultaneously. The 2-bit input is represented by the width of the input (IN) pulses, while the 1-bit weight is stored in STT-MRAM and the x7500 magnified TMR (m-TMR) ratio is obtained by latching. The proposal is simulated using 28-nm CMOS process and MTJ compact model. The integral nonlinearity is reduced by 57.6% compared with the conventional structure. 9.47-25.4 TOPS/W is realized with 2-bit input, 1-bit weight and 4-bit output convolution neural network (CNN).</summary>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-10-08T07:13:30Z</published>
+    <arxiv:comment>2021 submitted to IEEE Transactions on Circuits and Systems-I, regular papers</arxiv:comment>
+    <arxiv:primary_category term="cs.ET"/>
+    <author>
+      <name>Hao Cai</name>
+    </author>
+    <author>
+      <name>Yanan Guo</name>
+    </author>
+    <author>
+      <name>Bo Liu</name>
+    </author>
+    <author>
+      <name>Mingyang Zhou</name>
+    </author>
+    <author>
+      <name>Juntong Chen</name>
+    </author>
+    <author>
+      <name>Xinning Liu</name>
+    </author>
+    <author>
+      <name>Jun Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2206.04796v1</id>
+    <title>Scale up your In-Memory Accelerator: Leveraging Wireless-on-Chip Communication for AIMC-based CNN Inference</title>
+    <updated>2022-06-03T13:13:54Z</updated>
+    <link href="https://arxiv.org/abs/2206.04796v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2206.04796v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Analog In-Memory Computing (AIMC) is emerging as a disruptive paradigm for heterogeneous computing, potentially delivering orders of magnitude better peak performance and efficiency over traditional digital signal processing architectures on Matrix-Vector multiplication. However, to sustain this throughput in real-world applications, AIMC tiles must be supplied with data at very high bandwidth and low latency; this poses an unprecedented pressure on the on-chip communication infrastructure, which becomes the system's performance and efficiency bottleneck. In this context, the performance and plasticity of emerging on-chip wireless communication paradigms provide the required breakthrough to up-scale on-chip communication in large AIMC devices. This work presents a many-tile AIMC architecture with inter-tile wireless communication that integrates multiple heterogeneous computing clusters, embedding a mix of parallel RISC-V cores and AIMC tiles. We perform an extensive design space exploration of the proposed architecture and discuss the benefits of exploiting emerging on-chip communication technologies such as wireless transceivers in the millimeter-wave and terahertz bands.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-06-03T13:13:54Z</published>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Nazareno Bruschi</name>
+    </author>
+    <author>
+      <name>Giuseppe Tagliavini</name>
+    </author>
+    <author>
+      <name>Francesco Conti</name>
+    </author>
+    <author>
+      <name>Sergi Abadal</name>
+    </author>
+    <author>
+      <name>Alberto Cabellos-Aparicio</name>
+    </author>
+    <author>
+      <name>Eduard Alarcón</name>
+    </author>
+    <author>
+      <name>Geethan Karunaratne</name>
+    </author>
+    <author>
+      <name>Irem Boybat</name>
+    </author>
+    <author>
+      <name>Luca Benini</name>
+    </author>
+    <author>
+      <name>Davide Rossi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2205.10042v2</id>
+    <title>ALPINE: Analog In-Memory Acceleration with Tight Processor Integration for Deep Learning</title>
+    <updated>2022-12-13T15:28:21Z</updated>
+    <link href="https://arxiv.org/abs/2205.10042v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2205.10042v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Analog in-memory computing (AIMC) cores offers significant performance and energy benefits for neural network inference with respect to digital logic (e.g., CPUs). AIMCs accelerate matrix-vector multiplications, which dominate these applications' run-time. However, AIMC-centric platforms lack the flexibility of general-purpose systems, as they often have hard-coded data flows and can only support a limited set of processing functions. With the goal of bridging this gap in flexibility, we present a novel system architecture that tightly integrates analog in-memory computing accelerators into multi-core CPUs in general-purpose systems. We developed a powerful gem5-based full system-level simulation framework into the gem5-X simulator, ALPINE, which enables an in-depth characterization of the proposed architecture. ALPINE allows the simulation of the entire computer architecture stack from major hardware components to their interactions with the Linux OS. Within ALPINE, we have defined a custom ISA extension and a software library to facilitate the deployment of inference models. We showcase and analyze a variety of mappings of different neural network types, and demonstrate up to 20.5x/20.8x performance/energy gains with respect to a SIMD-enabled ARM CPU implementation for convolutional neural networks, multi-layer perceptrons, and recurrent neural networks.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-05-20T09:24:55Z</published>
+    <arxiv:comment>Accepted by IEEE Transactions on Computers, December 2022</arxiv:comment>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Joshua Klein</name>
+    </author>
+    <author>
+      <name>Irem Boybat</name>
+    </author>
+    <author>
+      <name>Yasir Qureshi</name>
+    </author>
+    <author>
+      <name>Martino Dazzi</name>
+    </author>
+    <author>
+      <name>Alexandre Levisse</name>
+    </author>
+    <author>
+      <name>Giovanni Ansaloni</name>
+    </author>
+    <author>
+      <name>Marina Zapater</name>
+    </author>
+    <author>
+      <name>Abu Sebastian</name>
+    </author>
+    <author>
+      <name>David Atienza</name>
+    </author>
+    <arxiv:doi>10.1109/TC.2022.3230285</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/TC.2022.3230285" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.04524v4</id>
+    <title>All-in-One Analog AI Hardware: On-Chip Training and Inference with Conductive-Metal-Oxide/HfOx ReRAM Devices</title>
+    <updated>2025-06-19T16:22:03Z</updated>
+    <link href="https://arxiv.org/abs/2502.04524v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.04524v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Analog in-memory computing is an emerging paradigm designed to efficiently accelerate deep neural network workloads. Recent advancements have focused on either inference or training acceleration. However, a unified analog in-memory technology platform-capable of on-chip training, weight retention, and long-term inference acceleration-has yet to be reported. This work presents an all-in-one analog AI accelerator, combining these capabilities to enable energy-efficient, continuously adaptable AI systems. The platform leverages an array of analog filamentary conductive-metal-oxide (CMO)/HfOx resistive switching memory cells (ReRAM) integrated into the back-end-of-line (BEOL). The array demonstrates reliable resistive switching with voltage amplitudes below 1.5V, compatible with advanced technology nodes. The array multi-bit capability (over 32 stable states) and low programming noise (down to 10nS) enable a nearly ideal weight transfer process, more than an order of magnitude better than other memristive technologies. Inference performance is validated through matrix-vector multiplication simulations on a 64x64 array, achieving a root-mean-square error improvement by a factor of 20 at 1 second and 3 at 10 years after programming, compared to state-of-the-art. Training accuracy closely matching the software equivalent is achieved across different datasets. The CMO/HfOx ReRAM technology lays the foundation for efficient analog systems accelerating both inference and training in deep neural networks.</summary>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-06T21:52:09Z</published>
+    <arxiv:primary_category term="cs.ET"/>
+    <author>
+      <name>Donato Francesco Falcone</name>
+    </author>
+    <author>
+      <name>Victoria Clerico</name>
+    </author>
+    <author>
+      <name>Wooseok Choi</name>
+    </author>
+    <author>
+      <name>Tommaso Stecconi</name>
+    </author>
+    <author>
+      <name>Folkert Horst</name>
+    </author>
+    <author>
+      <name>Laura Begon-Lours</name>
+    </author>
+    <author>
+      <name>Matteo Galetta</name>
+    </author>
+    <author>
+      <name>Antonio La Porta</name>
+    </author>
+    <author>
+      <name>Nikhil Garg</name>
+    </author>
+    <author>
+      <name>Fabien Alibart</name>
+    </author>
+    <author>
+      <name>Bert Jan Offrein</name>
+    </author>
+    <author>
+      <name>Valeria Bragaglia</name>
+    </author>
+    <arxiv:doi>10.1002/adfm.202504688</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1002/adfm.202504688" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.09420v3</id>
+    <title>LionHeart: A Layer-based Mapping Framework for Heterogeneous Systems with Analog In-Memory Computing Tiles</title>
+    <updated>2025-03-24T10:09:54Z</updated>
+    <link href="https://arxiv.org/abs/2401.09420v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.09420v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>When arranged in a crossbar configuration, resistive memory devices can be used to execute Matrix-Vector Multiplications (MVMs), the most dominant operation of many Machine Learning (ML) algorithms, in constant time complexity. Nonetheless, when performing computations in the analog domain, novel challenges are introduced in terms of arithmetic precision and stochasticity, due to non-ideal circuit and device behaviour. Moreover, these non-idealities have a temporal dimension, resulting in a degrading application accuracy over time. Facing these challenges, we propose a novel framework, named LionHeart, to obtain hybrid analog-digital mappings to execute Deep Learning (DL) inference workloads using heterogeneous accelerators. The accuracy-constrained mappings derived by LionHeart showcase, across different Convolutional Neural Networks (CNNs) and one transformer-based network, high accuracy and potential for speedup. The results of the full system simulations highlight run-time reductions and energy efficiency gains that exceed 6X, with a user-defined accuracy threshold for a fully digital floating point implementation. LionHeart is open-sourced here: https://github.com/IBM/lionheart.</summary>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-17T18:59:26Z</published>
+    <arxiv:comment>Accepted by IEEE Transactions on Emerging Topics in Computing</arxiv:comment>
+    <arxiv:primary_category term="cs.ET"/>
+    <author>
+      <name>Corey Lammie</name>
+    </author>
+    <author>
+      <name>Yuxuan Wang</name>
+    </author>
+    <author>
+      <name>Flavio Ponzina</name>
+    </author>
+    <author>
+      <name>Joshua Klein</name>
+    </author>
+    <author>
+      <name>Hadjer Benmeziane</name>
+    </author>
+    <author>
+      <name>Marina Zapater</name>
+    </author>
+    <author>
+      <name>Irem Boybat</name>
+    </author>
+    <author>
+      <name>Abu Sebastian</name>
+    </author>
+    <author>
+      <name>Giovanni Ansaloni</name>
+    </author>
+    <author>
+      <name>David Atienza</name>
+    </author>
+    <arxiv:doi>10.1109/TETC.2025.3546128</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/TETC.2025.3546128" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.17227v1</id>
+    <title>Hybrid Digital-Analog Approximate Inverse Preconditioning for Krylov Methods</title>
+    <updated>2026-06-15T19:18:50Z</updated>
+    <link href="https://arxiv.org/abs/2606.17227v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.17227v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Analog in-memory computing enables highly parallel matrix-vector multiplications with reduced data movement, but the resulting operations are noisy, quantized, and affected by device- and circuit-level non-idealities. This paper studies approximate inverse preconditioning for Krylov subspace methods in a hybrid digital-analog setting. The digital host performs sparse products with the coefficient matrix and the precision-sensitive Krylov operations, while preconditioner applications are performed through analog crossbar matrix-vector multiplications. Since the realized preconditioner is inexact and application-dependent, the outer iteration is formulated as the flexible GMRES method. We show that analog execution changes the usual preconditioner design problem in the sense that a stronger digital preconditioner may be less effective after analog scaling, write noise, input/output perturbations, quantization, and clipping are taken into account. We compare various block Jacobi preconditioning schemes including exact block inverses, sparse approximate inverses, Monte Carlo approximate inverses (MCAI), damping, and nested block Jacobi schemes. Numerical experiments with realistic analog matrix-vector simulations show that analog-aware choices of block size, damping, MCAI construction accuracy, and nesting are important for robust convergence.</summary>
+    <category term="math.NA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-15T19:18:50Z</published>
+    <arxiv:comment>25 pages; 12 figures</arxiv:comment>
+    <arxiv:primary_category term="math.NA"/>
+    <author>
+      <name>Shikhar Shah</name>
+    </author>
+    <author>
+      <name>Rui Peng Li</name>
+    </author>
+    <author>
+      <name>Tayfun Gokmen</name>
+    </author>
+    <author>
+      <name>Vassilis Kalantzis</name>
+    </author>
+    <author>
+      <name>Lior Horesh</name>
+    </author>
+    <author>
+      <name>Yuanzhe Xi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.05318v1</id>
+    <title>Robust Parameter-Efficient LLM Adaptation on Analog Hardware</title>
+    <updated>2026-10-04T15:39:20Z</updated>
+    <link href="https://arxiv.org/abs/2610.05318v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.05318v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Analog in-memory computing is a promising platform for on-device execution of large language models because it performs matrix--vector multiplications (MVMs) in memory and in parallel, reducing data movement. However, limited digital-to-analog converter precision, input noise, and finite conductance states can degrade model accuracy, while full-model retraining to address these effects can be costly. We develop an optimizer-agnostic, parameter-efficient adaptation method based on Low-Rank Adaptation (LoRA), keeping the pretrained weights stored on analog arrays fixed while training the LoRA weights to adapt to downstream tasks and hardware non-idealities. Reliable adaptation requires handling errors in both forward and backward MVMs and physical weight updates. We use input reshaping to reduce input-induced MVM errors and update accumulation to retain small updates before programming them to finite-state analog devices. Across Llama-3.2-1B-Instruct and Llama-3-8B with both Muon and AdamW, input reshaping improves analog LoRA fine-tuning under noisy MVM computation. Update accumulation separately preserves sub-threshold updates and substantially improves adaptation under finite-resolution programming, including configurations with as few as 20 conductance states. Additional experiments show consistent held-out negative log-likelihood improvements across noisy analog settings.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-04T15:39:20Z</published>
+    <arxiv:comment>Accepted at the NeurIPS 2026 Workshop on On-Device Intelligence: Foundation Models under Real-World Constraints (ODI 2026)</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Jindan Li</name>
+    </author>
+    <author>
+      <name>Zhaoxian Wu</name>
+    </author>
+    <author>
+      <name>Tianyi Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2212.02872v1</id>
+    <title>A 64-core mixed-signal in-memory compute chip based on phase-change memory for deep neural network inference</title>
+    <updated>2022-12-06T10:25:06Z</updated>
+    <link href="https://arxiv.org/abs/2212.02872v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2212.02872v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The need to repeatedly shuttle around synaptic weight values from memory to processing units has been a key source of energy inefficiency associated with hardware implementation of artificial neural networks. Analog in-memory computing (AIMC) with spatially instantiated synaptic weights holds high promise to overcome this challenge, by performing matrix-vector multiplications (MVMs) directly within the network weights stored on a chip to execute an inference workload. However, to achieve end-to-end improvements in latency and energy consumption, AIMC must be combined with on-chip digital operations and communication to move towards configurations in which a full inference workload is realized entirely on-chip. Moreover, it is highly desirable to achieve high MVM and inference accuracy without application-wise re-tuning of the chip. Here, we present a multi-core AIMC chip designed and fabricated in 14-nm complementary metal-oxide-semiconductor (CMOS) technology with backend-integrated phase-change memory (PCM). The fully-integrated chip features 64 256x256 AIMC cores interconnected via an on-chip communication network. It also implements the digital activation functions and processing involved in ResNet convolutional neural networks and long short-term memory (LSTM) networks. We demonstrate near software-equivalent inference accuracy with ResNet and LSTM networks while implementing all the computations associated with the weight layers and the activation functions on-chip. The chip can achieve a maximal throughput of 63.1 TOPS at an energy efficiency of 9.76 TOPS/W for 8-bit input/output matrix-vector multiplications.</summary>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-12-06T10:25:06Z</published>
+    <arxiv:primary_category term="cs.ET"/>
+    <arxiv:journal_ref>Nature Electronics 6, 680-693 (2023)</arxiv:journal_ref>
+    <author>
+      <name>Manuel Le Gallo</name>
+    </author>
+    <author>
+      <name>Riduan Khaddam-Aljameh</name>
+    </author>
+    <author>
+      <name>Milos Stanisavljevic</name>
+    </author>
+    <author>
+      <name>Athanasios Vasilopoulos</name>
+    </author>
+    <author>
+      <name>Benedikt Kersting</name>
+    </author>
+    <author>
+      <name>Martino Dazzi</name>
+    </author>
+    <author>
+      <name>Geethan Karunaratne</name>
+    </author>
+    <author>
+      <name>Matthias Braendli</name>
+    </author>
+    <author>
+      <name>Abhairaj Singh</name>
+    </author>
+    <author>
+      <name>Silvia M. Mueller</name>
+    </author>
+    <author>
+      <name>Julian Buechel</name>
+    </author>
+    <author>
+      <name>Xavier Timoneda</name>
+    </author>
+    <author>
+      <name>Vinay Joshi</name>
+    </author>
+    <author>
+      <name>Urs Egger</name>
+    </author>
+    <author>
+      <name>Angelo Garofalo</name>
+    </author>
+    <author>
+      <name>Anastasios Petropoulos</name>
+    </author>
+    <author>
+      <name>Theodore Antonakopoulos</name>
+    </author>
+    <author>
+      <name>Kevin Brew</name>
+    </author>
+    <author>
+      <name>Samuel Choi</name>
+    </author>
+    <author>
+      <name>Injo Ok</name>
+    </author>
+    <author>
+      <name>Timothy Philip</name>
+    </author>
+    <author>
+      <name>Victor Chan</name>
+    </author>
+    <author>
+      <name>Claire Silvestre</name>
+    </author>
+    <author>
+      <name>Ishtiaq Ahsan</name>
+    </author>
+    <author>
+      <name>Nicole Saulnier</name>
+    </author>
+    <author>
+      <name>Vijay Narayanan</name>
+    </author>
+    <author>
+      <name>Pier Andrea Francese</name>
+    </author>
+    <author>
+      <name>Evangelos Eleftheriou</name>
+    </author>
+    <author>
+      <name>Abu Sebastian</name>
+    </author>
+    <arxiv:doi>10.1038/s41928-023-01010-1</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s41928-023-01010-1" title="doi"/>
+  </entry>
+</feed>

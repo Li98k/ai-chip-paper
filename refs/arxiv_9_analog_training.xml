@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/VDcWMM58OtGhX4r8vUab5lza3KE</id>
+  <title>arXiv Query: search_query=all:"analog training" AND all:"in-memory"&amp;id_list=&amp;start=0&amp;max_results=8</title>
+  <updated>2026-10-09T14:16:55Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22analog+training%22+AND+all:%22in-memory%22&amp;start=0&amp;max_results=8&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>8</opensearch:itemsPerPage>
+  <opensearch:totalResults>7</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2510.02516v1</id>
+    <title>In-memory Training on Analog Devices with Limited Conductance States via Multi-tile Residual Learning</title>
+    <updated>2025-10-02T19:44:25Z</updated>
+    <link href="https://arxiv.org/abs/2510.02516v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.02516v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Analog in-memory computing (AIMC) accelerators enable efficient deep neural network computation directly within memory using resistive crossbar arrays, where model parameters are represented by the conductance states of memristive devices. However, effective in-memory training typically requires at least 8-bit conductance states to match digital baselines. Realizing such fine-grained states is costly and often requires complex noise mitigation techniques that increase circuit complexity and energy consumption. In practice, many promising memristive devices such as ReRAM offer only about 4-bit resolution due to fabrication constraints, and this limited update precision substantially degrades training accuracy. To enable on-chip training with these limited-state devices, this paper proposes a \emph{residual learning} framework that sequentially learns on multiple crossbar tiles to compensate the residual errors from low-precision weight updates. Our theoretical analysis shows that the optimality gap shrinks with the number of tiles and achieves a linear convergence rate. Experiments on standard image classification benchmarks demonstrate that our method consistently outperforms state-of-the-art in-memory analog training strategies under limited-state settings, while incurring only moderate hardware overhead as confirmed by our cost analysis.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-02T19:44:25Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Jindan Li</name>
+    </author>
+    <author>
+      <name>Zhaoxian Wu</name>
+    </author>
+    <author>
+      <name>Gaowen Liu</name>
+    </author>
+    <author>
+      <name>Tayfun Gokmen</name>
+    </author>
+    <author>
+      <name>Tianyi Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2406.12774v1</id>
+    <title>Towards Exact Gradient-based Training on Analog In-memory Computing</title>
+    <updated>2024-06-18T16:43:59Z</updated>
+    <link href="https://arxiv.org/abs/2406.12774v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.12774v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Given the high economic and environmental costs of using large vision or language models, analog in-memory accelerators present a promising solution for energy-efficient AI. While inference on analog accelerators has been studied recently, the training perspective is underexplored. Recent studies have shown that the "workhorse" of digital AI training - stochastic gradient descent (SGD) algorithm converges inexactly when applied to model training on non-ideal devices. This paper puts forth a theoretical foundation for gradient-based training on analog devices. We begin by characterizing the non-convergent issue of SGD, which is caused by the asymmetric updates on the analog devices. We then provide a lower bound of the asymptotic error to show that there is a fundamental performance limit of SGD-based analog training rather than an artifact of our analysis. To address this issue, we study a heuristic analog algorithm called Tiki-Taka that has recently exhibited superior empirical performance compared to SGD and rigorously show its ability to exactly converge to a critical point and hence eliminates the asymptotic error. The simulations verify the correctness of the analyses.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-18T16:43:59Z</published>
+    <arxiv:comment>10 pages, 5 figures,2 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Zhaoxian Wu</name>
+    </author>
+    <author>
+      <name>Tayfun Gokmen</name>
+    </author>
+    <author>
+      <name>Malte J. Rasch</name>
+    </author>
+    <author>
+      <name>Tianyi Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.10037v3</id>
+    <title>Parameter Efficient Machine Unlearning on Hybrid Resistive Memory based Compute-in-Memory Accelerators</title>
+    <updated>2026-07-10T03:00:04Z</updated>
+    <link href="https://arxiv.org/abs/2601.10037v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.10037v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Resistive memory compute-in-memory accelerators provide energy efficient analogue matrix vector multiplication for neural network inference, but frequent reprogramming of analogue weights remains costly because of device variability and iterative write and verify operations. This limitation hinders their use in edge model adaptation, including approximate machine unlearning and continual learning, where model parameters may need to be updated repeatedly in response to data deletion requests or newly arriving tasks. Here we present a co-design approach across hardware and software that maps frozen pretrained weights to analogue resistive memory arrays while placing trainable low rank adaptation branches in SRAM connected digital compute. By using LoRA style parameter efficient updates, the proposed scheme confines adaptation to a small set of digital parameters and avoids repeated reprogramming of the analogue backbone. To our knowledge, this work provides the first experimental demonstration of approximate machine unlearning on a fabricated resistive memory CIM accelerator. We validate the framework on a 180 nm 128x128 1T1R resistive-memory macro for face recognition, and through circuit-accurate simulations for speaker authentication and stylized image generation tasks, owing to the substantial model sizes involved. Compared with a baseline that directly updates analog weights, our hybrid mapping reduces analog training/update cost by up to 148x, on-chip deployment overhead by up to 388x, and inference energy by up to 59x, while preserving competitive task performance. These results show that hybrid analogue-digital LoRA mapping can enable efficient post-deployment adaptation on RM-CIM hardware, although formal machine-unlearning guarantees and large-scale system integration remain open challenges.</summary>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-15T03:28:28Z</published>
+    <arxiv:primary_category term="cs.ET"/>
+    <author>
+      <name>Ning Lin</name>
+    </author>
+    <author>
+      <name>Jichang Yang</name>
+    </author>
+    <author>
+      <name>Yangu He</name>
+    </author>
+    <author>
+      <name>Zijian Ye</name>
+    </author>
+    <author>
+      <name>Kwun Hang Wong</name>
+    </author>
+    <author>
+      <name>Xinyuan Zhang</name>
+    </author>
+    <author>
+      <name>Songqi Wang</name>
+    </author>
+    <author>
+      <name>Zihao Li</name>
+    </author>
+    <author>
+      <name>Yuxi Chen</name>
+    </author>
+    <author>
+      <name>Jiajia Zha</name>
+    </author>
+    <author>
+      <name>Wenxing Li</name>
+    </author>
+    <author>
+      <name>Yi Li</name>
+    </author>
+    <author>
+      <name>Kemi Xu</name>
+    </author>
+    <author>
+      <name>Leo Yu Zhang</name>
+    </author>
+    <author>
+      <name>Xiaoming Chen</name>
+    </author>
+    <author>
+      <name>Dashan Shang</name>
+    </author>
+    <author>
+      <name>Chaoliang Tan</name>
+    </author>
+    <author>
+      <name>Han Wang</name>
+    </author>
+    <author>
+      <name>Xiaojuan Qi</name>
+    </author>
+    <author>
+      <name>Zhongrui Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.11067v1</id>
+    <title>Assessing the Performance of Analog Training for Transfer Learning</title>
+    <updated>2025-05-16T10:02:32Z</updated>
+    <link href="https://arxiv.org/abs/2505.11067v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.11067v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Analog in-memory computing is a next-generation computing paradigm that promises fast, parallel, and energy-efficient deep learning training and transfer learning (TL). However, achieving this promise has remained elusive due to a lack of suitable training algorithms. Analog memory devices exhibit asymmetric and non-linear switching behavior in addition to device-to-device variation, meaning that most, if not all, of the current off-the-shelf training algorithms cannot achieve good training outcomes. Also, recently introduced algorithms have enjoyed limited attention, as they require bi-directionally switching devices of unrealistically high symmetry and precision and are highly sensitive. A new algorithm chopped TTv2 (c-TTv2), has been introduced, which leverages the chopped technique to address many of the challenges mentioned above. In this paper, we assess the performance of the c-TTv2 algorithm for analog TL using a Swin-ViT model on a subset of the CIFAR100 dataset. We also investigate the robustness of our algorithm to changes in some device specifications, including weight transfer noise, symmetry point skew, and symmetry point variability</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-16T10:02:32Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Omobayode Fagbohungbe</name>
+    </author>
+    <author>
+      <name>Corey Lammie</name>
+    </author>
+    <author>
+      <name>Malte J. Rasch</name>
+    </author>
+    <author>
+      <name>Takashi Ando</name>
+    </author>
+    <author>
+      <name>Tayfun Gokmen</name>
+    </author>
+    <author>
+      <name>Vijay Narayanan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.36584v1</id>
+    <title>Making Analog Training Scale: Co-Designing Mapping, Optimizer, and Converters</title>
+    <updated>2026-09-29T03:02:50Z</updated>
+    <link href="https://arxiv.org/abs/2609.36584v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.36584v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Analog in-memory computing (AIMC) offers an alternative for model training by executing matrix operations directly where weights are stored. However, scaling AIMC to train modern deep models remains an open challenge due to severe hardware non-idealities, including physical weights with finite dynamic range and write granularity, analog-digital converters with finite resolution, and noisy and asymmetric updates. Guided by the insight that gradient accumulation is sensitive to precision and rounding errors, we adopt a mixed-precision training paradigm: executing forward and backward matrix multiplications in the analog domain while computing weight gradients in the digital domain. To enable scalable training, we present a holistic system-algorithm co-design that co-optimizes weight mapping to ensure well-conditioned physical and logical weight profiles, couples a preconditioned optimizer with threshold-triggered open-loop pulsing to stabilize training trajectories, and aligns converter dynamic ranges to suppress quantization errors. Evaluated via hardware-calibrated architectural simulations calibrated with electrochemical RAM measurements, our framework scales Transformer training up to $123\text{M}$ parameters with validation loss scaling as $L\propto N^{-0.231}$, where $N$ is the parameter count, comparable to $L\propto N^{-0.238}$ for digital training.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-29T03:02:50Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Zhaoxian Wu</name>
+    </author>
+    <author>
+      <name>Tayfun Gokmen</name>
+    </author>
+    <author>
+      <name>Omobayode Fagbohungbe</name>
+    </author>
+    <author>
+      <name>T. Patrick Xiao</name>
+    </author>
+    <author>
+      <name>Tianyi Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.22868v1</id>
+    <title>Neighborhood Sampling Does Not Learn the Same Graph Neural Network</title>
+    <updated>2025-09-26T19:28:13Z</updated>
+    <link href="https://arxiv.org/abs/2509.22868v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.22868v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Neighborhood sampling is an important ingredient in the training of large-scale graph neural networks. It suppresses the exponential growth of the neighborhood size across network layers and maintains feasible memory consumption and time costs. While it becomes a standard implementation in practice, its systemic behaviors are less understood. We conduct a theoretical analysis by using the tool of neural tangent kernels, which characterize the (analogous) training dynamics of neural networks based on their infinitely wide counterparts -- Gaussian processes (GPs). We study several established neighborhood sampling approaches and the corresponding posterior GP. With limited samples, the posteriors are all different, although they converge to the same one as the sample size increases. Moreover, the posterior covariance, which lower-bounds the mean squared prediction error, is uncomparable, aligning with observations that no sampling approach dominates.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="stat.ML" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-26T19:28:13Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Zehao Niu</name>
+    </author>
+    <author>
+      <name>Mihai Anitescu</name>
+    </author>
+    <author>
+      <name>Jie Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.28487v1</id>
+    <title>ProvMind: Provenance-grounded reasoning for materials synthesis</title>
+    <updated>2026-05-27T13:44:24Z</updated>
+    <link href="https://arxiv.org/abs/2605.28487v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.28487v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Materials process optimization requires reasoning over routes, conditions, tools and causal dependencies, yet most computational formulations flatten synthesis procedures into text or ordered steps. We introduce MatProcBench, a provenance-grounded benchmark constructed from literature-mined MatPROV graphs, to evaluate seven process-reasoning tasks spanning route continuity, step-level variable inference and global causal consistency under both same-split and shift-aware evaluation, including a strict dual-OOD split that combines temporal and material-class shift. We further introduce ProvMind, a process-memory reasoning framework that retrieves analogous training processes, converts them into provenance-aware option-level compatibility scores, and uses a language model for constrained final decision making. ProvMind achieves 52.84\% accuracy on the dual-OOD split, outperforming prompting, retrieval-augmented and supervised fine-tuning baselines.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-27T13:44:24Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Yiming Zhang</name>
+    </author>
+    <author>
+      <name>Ryo Tamura</name>
+    </author>
+    <author>
+      <name>Koji Tsuda</name>
+    </author>
+  </entry>
+</feed>

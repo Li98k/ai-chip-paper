@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/GZzNRm1jbRBMVY9DPCoKSHyX9Lg</id>
+  <title>arXiv Query: search_query=abs:"transistor" AND abs:"analog multiplier" AND abs:"current"&amp;id_list=&amp;start=0&amp;max_results=6</title>
+  <updated>2026-10-09T15:05:12Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22transistor%22+AND+(abs:%22analog+multiplier%22+AND+abs:%22current%22)&amp;start=0&amp;max_results=6&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>6</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1805.07735v2</id>
+    <title>CMOS-Memristive Analog Multiplier Design</title>
+    <updated>2019-08-27T12:16:54Z</updated>
+    <link href="https://arxiv.org/abs/1805.07735v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1805.07735v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper proposes four quadrant analog multiplier using CMOS-memristor circuit. Currently, there are plenty of analog multipliers using resistors and CMOS transistors. They can attain perfect multiplication but have several disadvantages such as lower processing speed, higher power consumption and larger chip areas. Memristor based circuits are introduced to resolve the mentioned drawbacks. In this paper current mode four quadrant multiplier based on squaring circuits is taken as a framework, and CMOS transistors are replaced with memristors. The circuit design is simulated with SPICE, and variability analysis and performance variation with temperature is performed. The proposed circuit allows faster processing with retained data while dissipating less power retaining the multiplication characteristics.</summary>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-05-20T08:49:44Z</published>
+    <arxiv:comment>the paper is no more relevant and up-to-date</arxiv:comment>
+    <arxiv:primary_category term="cs.ET"/>
+    <author>
+      <name>Ileskhan Kalysh</name>
+    </author>
+    <author>
+      <name>Olga Krestinskaya</name>
+    </author>
+    <author>
+      <name>Alex Pappachen James</name>
+    </author>
+  </entry>
+</feed>

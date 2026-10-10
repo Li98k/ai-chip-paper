@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/Cnio+EXjzDPOHp6GTO566BzqHZk</id>
+  <title>arXiv Query: search_query=&amp;id_list=2504.16225&amp;start=0&amp;max_results=10</title>
+  <updated>2026-10-09T15:34:48Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2504.16225" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2504.16225v3</id>
+    <title>Towards a Generalized Theory of Observers</title>
+    <updated>2026-01-07T10:29:28Z</updated>
+    <link href="https://arxiv.org/abs/2504.16225v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.16225v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a formal framework for understanding and unifying the concept of observers across physics, computer science, philosophy, and related fields. Building on cybernetic feedback models, we introduce an operational definition of minimal observers, explore their role in shaping foundational concepts, and identify what remains unspecified in their absence. Drawing upon insights from quantum gravity, digital physics, second-order cybernetics, and recent ruliological and pregeometric approaches, we argue that observers serve as indispensable reference points for measurement, reference frames, and the emergence of meaning. We show how this formalism sheds new light on debates related to consciousness, quantum measurement, and computational boundaries; by way of theorems on observer equivalences and complexity measures. This perspective opens new avenues for investigating how complexity and structure arise in both natural and artificial systems.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IT" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.comp-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.hist-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.soc-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-22T19:35:55Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Hatem Elshatlawy</name>
+    </author>
+    <author>
+      <name>Dean Rickles</name>
+    </author>
+    <author>
+      <name>Xerxes D. Arsiwalla</name>
+    </author>
+  </entry>
+</feed>

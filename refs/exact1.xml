@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/fdMZvBBjzRXUTQvcML1Z1b7NQJY</id>
+  <title>arXiv Query: search_query=ti:"Precise neural network computation with imprecise analog devices"&amp;id_list=&amp;start=0&amp;max_results=3</title>
+  <updated>2026-10-09T15:05:48Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=ti:%22Precise+neural+network+computation+with+imprecise+analog+devices%22&amp;start=0&amp;max_results=3&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>3</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1606.07786v2</id>
+    <title>Precise neural network computation with imprecise analog devices</title>
+    <updated>2020-02-20T06:27:05Z</updated>
+    <link href="https://arxiv.org/abs/1606.07786v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1606.07786v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The operations used for neural network computation map favorably onto simple analog circuits, which outshine their digital counterparts in terms of compactness and efficiency. Nevertheless, such implementations have been largely supplanted by digital designs, partly because of device mismatch effects due to material and fabrication imperfections. We propose a framework that exploits the power of deep learning to compensate for this mismatch by incorporating the measured device variations as constraints in the neural network training process. This eliminates the need for mismatch minimization strategies and allows circuit complexity and power-consumption to be reduced to a minimum. Our results, based on large-scale simulations as well as a prototype VLSI chip implementation indicate a processing efficiency comparable to current state-of-art digital implementations. This method is suitable for future technology based on nanodevices with large variability, such as memristive arrays.</summary>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-06-23T18:32:43Z</published>
+    <arxiv:primary_category term="cs.NE"/>
+    <author>
+      <name>Jonathan Binas</name>
+    </author>
+    <author>
+      <name>Daniel Neil</name>
+    </author>
+    <author>
+      <name>Giacomo Indiveri</name>
+    </author>
+    <author>
+      <name>Shih-Chii Liu</name>
+    </author>
+    <author>
+      <name>Michael Pfeiffer</name>
+    </author>
+  </entry>
+</feed>

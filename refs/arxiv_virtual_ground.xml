@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/eDmUl7pHFRwNCo39tIjdXZHeY3k</id>
+  <title>arXiv Query: search_query=abs:"virtual ground" AND abs:"crossbar" AND abs:"analog"&amp;id_list=&amp;start=0&amp;max_results=6</title>
+  <updated>2026-10-09T14:56:36Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22virtual+ground%22+AND+(abs:%22crossbar%22+AND+abs:%22analog%22)&amp;start=0&amp;max_results=6&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>6</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2505.12830v1</id>
+    <title>2T1R Regulated Memristor Conductance Control Array Architecture for Neuromorphic Computing using 28nm CMOS Technology</title>
+    <updated>2025-05-19T08:16:47Z</updated>
+    <link href="https://arxiv.org/abs/2505.12830v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.12830v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Memristors are promising devices for scalable and low power, in-memory computing to improve the energy efficiency of a rising computational demand. The crossbar array architecture with memristors is used for vector matrix multiplication (VMM) and acts as kernels in neuromorphic computing. The analog conductance control in a memristor is achieved by applying voltage or current through it. A basic 1T1R array is suitable to avoid sneak path issues but suffer from wire resistances, which affects the read and write procedures. A conductance control scheme with a regulated voltage source will improve the architecture and reduce the possible potential divider effects. A change in conductance is also possible with the provision of a regulated current source and measuring the voltage across the memristors. A regulated 2T1R memristor conductance control architecture is proposed in this work, which avoids the potential divider effect and virtual ground scenario in a regular crossbar scheme, as well as conductance control by passing a regulated current through memristors. The sneak path current is not allowed to pass by the provision of ground potential to both terminals of memristors.</summary>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-19T08:16:47Z</published>
+    <arxiv:primary_category term="cs.ET"/>
+    <author>
+      <name>Neethu Kuriakose</name>
+      <arxiv:affiliation>Central Institute of Engineering, Electronics and Analytics -- Electronic Systems</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Arun Ashok</name>
+      <arxiv:affiliation>Central Institute of Engineering, Electronics and Analytics -- Electronic Systems</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Christian Grewing</name>
+      <arxiv:affiliation>Central Institute of Engineering, Electronics and Analytics -- Electronic Systems</arxiv:affiliation>
+    </author>
+    <author>
+      <name>André Zambanini</name>
+      <arxiv:affiliation>Central Institute of Engineering, Electronics and Analytics -- Electronic Systems</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Stefan van Waasen</name>
+      <arxiv:affiliation>Central Institute of Engineering, Electronics and Analytics -- Electronic Systems</arxiv:affiliation>
+      <arxiv:affiliation>Faculty of Engineering, Communication Systems, University of Duisburg-Essen, 47057 Duisburg, Germany</arxiv:affiliation>
+    </author>
+  </entry>
+</feed>

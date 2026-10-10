@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/QddWmPgYhVJ5Ni6+wVXhgxR3ww8</id>
+  <title>arXiv Query: search_query=abs:"conductance" AND abs:"positive" AND abs:"analog" AND abs:"compute"&amp;id_list=&amp;start=0&amp;max_results=6</title>
+  <updated>2026-10-09T15:05:04Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22conductance%22+AND+(abs:%22positive%22+AND+(abs:%22analog%22+AND+abs:%22compute%22))&amp;start=0&amp;max_results=6&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>6</opensearch:itemsPerPage>
+  <opensearch:totalResults>20</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2105.05534v1</id>
+    <title>Statistical Temperature Coefficient Distribution in Analog RRAM Array: Impact on Neuromorphic System and Mitigation Method</title>
+    <updated>2021-05-12T09:23:03Z</updated>
+    <link href="https://arxiv.org/abs/2105.05534v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2105.05534v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Emerging analog resistive random access memory (RRAM) based on HfOx is an attractive device for non-von Neumann neuromorphic computing systems. The differences in temperature dependent conductance drift among cells hamper computing accuracy, characterized by the statistical distribution of temperature coefficient(Tα). A compact model was presented in order to investigate the statistical distribution of Tα under different resistance states. Based on this model, the physical mechanism of thermal instability of cells with a positive Tα was elucidated. Furthermore, this model can also effectively evaluate the impact of conductance distribution of different levels under various temperatures in artificial neural networks (ANN). An approach incorporating the optimized conductance range selection and the current compensation scheme was proposed to reduce the impacts of the distribution of Tα. The simulation results showed that recognition accuracy was improved from 79.8% to 89.6% for the application of MNIST handwriting digits classification with a two-layer perceptron at 400K after adopting the proposed optimization method.</summary>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.app-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-05-12T09:23:03Z</published>
+    <arxiv:primary_category term="cs.ET"/>
+    <author>
+      <name>Heng Xu</name>
+    </author>
+    <author>
+      <name>Yue Sun</name>
+    </author>
+    <author>
+      <name>Yangyang Zhu</name>
+    </author>
+    <author>
+      <name>Xiaohu Wang</name>
+    </author>
+    <author>
+      <name>Guoxuan Qin</name>
+    </author>
+    <arxiv:doi>10.1088/1361-6463/ac296d</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/1361-6463/ac296d" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2406.06669v2</id>
+    <title>Composite helical edges from Abelian fractional topological insulators</title>
+    <updated>2024-10-09T17:35:01Z</updated>
+    <link href="https://arxiv.org/abs/2406.06669v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.06669v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study an interacting composite $(1+1/n)$ Abelian helical edge state made of a regular helical liquid carrying charge $e$ and a (fractionalized) helical liquid carrying charge $e/n$. A systematic framework is developed for these composite $(1+1/n)$ Abelian helical edge states with $n=1,2,3$. For $n=2$, the composite edge state consists of a regular helical Luttinger liquid and a fractional topological insulator (the Abelian $Z_4$ topological order) edge state arising from half-filled conjugated Chern bands. The composite edge state with $n=2$ is pertinent to the recent twisted MoTe$_2$ experiment, suggesting a possible fractional topological insulator with conductance $\frac{3}{2}\frac{e^2}{h}$ per edge. Using bosonization, we construct generic phase diagrams in the presence of $weak$ Rashba spin-orbit coupling. In addition to a phase of free bosons, we find a time-reversal symmetry-breaking localized insulator, two perfect positive drag phases, a perfect negative drag phase (for $n=2,3$), a time-reversal symmetric Anderson localization (only for $n=1$), and a disorder-dominated metallic phase analogous to the $ν=2/3$ disordered fractional quantum Hall edges (only for $n=3$). We further compute the two-terminal edge-state conductance, the primary experimental characterization for the (fractional) topological insulator. Remarkably, the negative drag phase gives rise to an unusual edge-state conductance, $(1-1/n)\frac{e^2}{h}$, not directly associated with the filling factor. We further investigate the effect of an applied in-plane magnetic field. For $n&gt;1$, the applied magnetic field can result in a phase with edge-state conductance $\frac{1}{n}\frac{e^2}{h}$, providing another testable signature. Our work establishes a systematic understanding of the composite $(1+1/n)$ Abelian helical edge, paving the way for future experimental and theoretical studies.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-10T18:00:00Z</published>
+    <arxiv:comment>22 pages and 6 figures. Published version</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <arxiv:journal_ref>Phys. Rev. B 110, 155117 (2024); Editors' Suggestion</arxiv:journal_ref>
+    <author>
+      <name>Yang-Zhi Chou</name>
+    </author>
+    <author>
+      <name>Sankar Das Sarma</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.110.155117</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.110.155117" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1003.2277v1</id>
+    <title>Magnetotransport of Dirac Fermions on the surface of a topological insulator</title>
+    <updated>2010-03-11T09:00:35Z</updated>
+    <link href="https://arxiv.org/abs/1003.2277v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1003.2277v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the properties of Dirac fermions on the surface of a topological insulator in the presence of crossed electric and magnetic fields. We provide an exact solution to this problem and demonstrate that, in contrast to their counterparts in graphene, these Dirac fermions allow relative tuning of the orbital and Zeeman effects of an applied magnetic field by a crossed electric field along the surface. We also elaborate and extend our earlier results on normal metal-magnetic film-normal metal (NMN) and normal metal-barrier-magnetic film (NBM) junctions of topological insulators [Phys. Rev. Lett. {\bf 104}, 046403 (2010)]. For NMN junctions, we show that for Dirac fermions with Fermi velocity $v_F$, the transport can be controlled using the exchange field ${\mathcal J}$ of a ferromagnetic film over a region of width $d$. The conductance of such a junction changes from oscillatory to a monotonically decreasing function of $d$ beyond a critical ${\mathcal J}$ which leads to the possible realization of magnetic switches using these junctions. For NBM junctions with a potential barrier of width $d$ and potential $V_0$, we find that beyond a critical ${\mathcal J}$, the criteria of conductance maxima changes from $χ= e V_0 d/\hbar v_F = n π$ to $χ= (n+1/2)π$ for integer $n$. Finally, we compute the subgap tunneling conductance of a normal metal-magnetic film-superconductor (NMS) junctions on the surface of a topological insulator and show that the position of the peaks of the zero-bias tunneling conductance can be tuned using the magnetization of the ferromagnetic film. We point out that these phenomena have no analogs in either conventional two-dimensional materials or Dirac electrons in graphene and suggest experiments to test our theory.</summary>
+    <category term="cond-mat.str-el" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-03-11T09:00:35Z</published>
+    <arxiv:comment>11 pages, 12 figures; v1</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.str-el"/>
+    <author>
+      <name>S. Mondal</name>
+    </author>
+    <author>
+      <name>D. Sen</name>
+    </author>
+    <author>
+      <name>K. Sengupta</name>
+    </author>
+    <author>
+      <name>R. Shankar</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevB.82.045120</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevB.82.045120" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2106.09144v1</id>
+    <title>FORMS: Fine-grained Polarized ReRAM-based In-situ Computation for Mixed-signal DNN Accelerator</title>
+    <updated>2021-06-16T21:42:08Z</updated>
+    <link href="https://arxiv.org/abs/2106.09144v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2106.09144v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent works demonstrated the promise of using resistive random access memory (ReRAM) as an emerging technology to perform inherently parallel analog domain in-situ matrix-vector multiplication -- the intensive and key computation in DNNs. With weights stored in the ReRAM crossbar cells as conductance, when the input vector is applied to word lines, the matrix-vector multiplication results can be generated as the current in bit lines. A key problem is that the weight can be either positive or negative, but the in-situ computation assumes all cells on each crossbar column with the same sign. The current architectures either use two ReRAM crossbars for positive and negative weights, or add an offset to weights so that all values become positive. Neither solution is ideal: they either double the cost of crossbars, or incur extra offset circuity. To better solve this problem, this paper proposes FORMS, a fine-grained ReRAM-based DNN accelerator with polarized weights. Instead of trying to represent the positive/negative weights, our key design principle is to enforce exactly what is assumed in the in-situ computation -- ensuring that all weights in the same column of a crossbar have the same sign. It naturally avoids the cost of an additional crossbar. Such weights can be nicely generated using alternating direction method of multipliers (ADMM) regularized optimization, which can exactly enforce certain patterns in DNN weights. To achieve high accuracy, we propose to use fine-grained sub-array columns, which provide a unique opportunity for input zero-skipping, significantly avoiding unnecessary computations. It also makes the hardware much easier to implement. Putting all together, with the same optimized models, FORMS achieves significant throughput improvement and speed up in frame per second over ISAAC with similar area cost.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-06-16T21:42:08Z</published>
+    <arxiv:comment>In Proceedings of the 48th Annual International Symposium on Computer Architecture (ISCA), 2021</arxiv:comment>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Geng Yuan</name>
+    </author>
+    <author>
+      <name>Payman Behnam</name>
+    </author>
+    <author>
+      <name>Zhengang Li</name>
+    </author>
+    <author>
+      <name>Ali Shafiee</name>
+    </author>
+    <author>
+      <name>Sheng Lin</name>
+    </author>
+    <author>
+      <name>Xiaolong Ma</name>
+    </author>
+    <author>
+      <name>Hang Liu</name>
+    </author>
+    <author>
+      <name>Xuehai Qian</name>
+    </author>
+    <author>
+      <name>Mahdi Nazm Bojnordi</name>
+    </author>
+    <author>
+      <name>Yanzhi Wang</name>
+    </author>
+    <author>
+      <name>Caiwen Ding</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.02364v1</id>
+    <title>Graphene-Based Artificial Dendrites for Bio-Inspired Learning in Spiking Neuromorphic Systems</title>
+    <updated>2023-10-03T18:40:19Z</updated>
+    <link href="https://arxiv.org/abs/2310.02364v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.02364v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Analog neuromorphic computing systems emulate the parallelism and connectivity of the human brain, promising greater expressivity and energy efficiency compared to digital systems. Though many devices have emerged as candidates for artificial neurons and artificial synapses, there have been few device candidates for artificial dendrites. In this work, we report on biocompatible graphene-based artificial dendrites (GrADs) that can implement dendritic processing. By using a dual side-gate configuration, current applied through a Nafion membrane can be used to control device conductance across a trilayer graphene channel, showing spatiotemporal responses of leaky recurrent, alpha, and gaussian dendritic potentials. The devices can be variably connected to enable higher order neuronal responses, and we show through data-driven spiking neural network classification simulations that overall spiking activity is reduced by up to 15% without accuracy loss while low frequency operation is stabilized. This positions the GrADs as strong candidates for energy efficient bio-interfaced spiking neural networks.</summary>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.app-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-03T18:40:19Z</published>
+    <arxiv:primary_category term="cond-mat.mes-hall"/>
+    <author>
+      <name>Samuel Liu</name>
+    </author>
+    <author>
+      <name>Deji Akinwande</name>
+    </author>
+    <author>
+      <name>Dmitry Kireev</name>
+    </author>
+    <author>
+      <name>Jean Anne C. Incorvia</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.16295v1</id>
+    <title>ANVIL: Analogies and Videos for Lecturers</title>
+    <updated>2026-04-15T12:12:14Z</updated>
+    <link href="https://arxiv.org/abs/2605.16295v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.16295v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present ANVIL, a multimodal generative system that automates the production of analogy-based instructional animations for computer science topics. Given a concept definition, ANVIL generates a textual analogy, compiles it into a structured visual screenplay, and produces executable manim code to render an animation, with an automated repair mechanism to improve robustness. Evaluating such systems at scale requires balancing pedagogical validity with scalability. We begin with a teacher evaluation to ground the quality assessment and use its findings to guide automated screening. For textual analogies, we introduce an LLM-based evaluator for scalable quality screening; for videos, where subjective judgments are difficult to automate, we instead assess fidelity to the intended screenplay using an automated proxy for auditing and error analysis. We further conduct a user study with educators to examine adoption requirements and risks. Our findings suggest that ANVIL can produce materials that are frequently rated as adequate, and that educators respond positively to its perceived value and usability.</summary>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-15T12:12:14Z</published>
+    <arxiv:primary_category term="cs.CY"/>
+    <author>
+      <name>Yuri Noviello</name>
+    </author>
+    <author>
+      <name>Anastasiia Birillo</name>
+    </author>
+    <author>
+      <name>Gosia Migut</name>
+    </author>
+  </entry>
+</feed>

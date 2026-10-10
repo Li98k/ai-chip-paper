@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/DtwxvOvGAC2Xdu6u758FLEFlUm4</id>
+  <title>arXiv Query: search_query=&amp;id_list=2507.09776&amp;start=0&amp;max_results=10</title>
+  <updated>2026-10-09T15:38:20Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2507.09776" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2507.09776v2</id>
+    <title>Compute SNR-Optimal Analog-to-Digital Converters for Analog In-Memory Computing</title>
+    <updated>2025-07-15T02:44:11Z</updated>
+    <link href="https://arxiv.org/abs/2507.09776v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.09776v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Analog in-memory computing (AIMC) is an energy-efficient alternative to digital architectures for accelerating machine learning and signal processing workloads. However, its energy efficiency is limited by the high energy cost of the column analog-to-digital converters (ADCs). Reducing the ADC precision is an effective approach to lowering its energy cost. However, doing so also reduces the AIMC's computational accuracy thereby making it critical to identify the minimum precision required to meet a target accuracy. Prior works overestimate the ADC precision requirements by modeling quantization error as input-independent noise, maximizing the signal-to-quantization-noise ratio (SQNR), and ignoring the discrete nature of ideal pre-ADC signal. We address these limitations by developing analytical expressions for estimating the compute signal-to-noise ratio (CSNR), a true metric of accuracy for AIMCs, and propose CACTUS, an algorithm to obtain CSNR-optimal ADC parameters. Using a circuit-aware behavioral model of an SRAM-based AIMC in a 28nm CMOS process, we show that for a 256-dimensional binary dot product, CACTUS reduces the ADC precision requirements by 3b while achieving 6dB higher CSNR over prior methods. We also delineate operating conditions under which our proposed CSNR-optimal ADCs outperform conventional SQNR-optimal ADCs.</summary>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-13T20:13:20Z</published>
+    <arxiv:comment>Code available at: https://github.com/mihirvk2/CSNR-optimal-ADC</arxiv:comment>
+    <arxiv:primary_category term="eess.SP"/>
+    <author>
+      <name>Mihir Kavishwar</name>
+    </author>
+    <author>
+      <name>Naresh Shanbhag</name>
+    </author>
+  </entry>
+</feed>

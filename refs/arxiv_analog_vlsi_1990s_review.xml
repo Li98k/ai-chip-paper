@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/Yl6afp0g/cQlvMwjgbU51yDl8z8</id>
+  <title>arXiv Query: search_query=ti:"analog" AND ti:"neural" AND abs:"VLSI" AND abs:"implementation"&amp;id_list=&amp;start=0&amp;max_results=6</title>
+  <updated>2026-10-09T15:05:08Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=ti:%22analog%22+AND+(ti:%22neural%22+AND+(abs:%22VLSI%22+AND+abs:%22implementation%22))&amp;start=0&amp;max_results=6&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>6</opensearch:itemsPerPage>
+  <opensearch:totalResults>3</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1606.07786v2</id>
+    <title>Precise neural network computation with imprecise analog devices</title>
+    <updated>2020-02-20T06:27:05Z</updated>
+    <link href="https://arxiv.org/abs/1606.07786v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1606.07786v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The operations used for neural network computation map favorably onto simple analog circuits, which outshine their digital counterparts in terms of compactness and efficiency. Nevertheless, such implementations have been largely supplanted by digital designs, partly because of device mismatch effects due to material and fabrication imperfections. We propose a framework that exploits the power of deep learning to compensate for this mismatch by incorporating the measured device variations as constraints in the neural network training process. This eliminates the need for mismatch minimization strategies and allows circuit complexity and power-consumption to be reduced to a minimum. Our results, based on large-scale simulations as well as a prototype VLSI chip implementation indicate a processing efficiency comparable to current state-of-art digital implementations. This method is suitable for future technology based on nanodevices with large variability, such as memristive arrays.</summary>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-06-23T18:32:43Z</published>
+    <arxiv:primary_category term="cs.NE"/>
+    <author>
+      <name>Jonathan Binas</name>
+    </author>
+    <author>
+      <name>Daniel Neil</name>
+    </author>
+    <author>
+      <name>Giacomo Indiveri</name>
+    </author>
+    <author>
+      <name>Shih-Chii Liu</name>
+    </author>
+    <author>
+      <name>Michael Pfeiffer</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1902.07707v1</id>
+    <title>An Energy-efficient Time-domain Analog VLSI Neural Network Processor Based on a Pulse-width Modulation Approach</title>
+    <updated>2019-02-16T16:34:31Z</updated>
+    <link href="https://arxiv.org/abs/1902.07707v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1902.07707v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A time-domain analog-weighted-sum calculation model based on a pulse-width modulation (PWM) approach is proposed. The proposed calculation model can be applied to any types of network structure including multi-layer feedforward networks. We also propose very large-scale integrated (VLSI) circuits to implement the proposed model. Unlike the conventional analog voltage or current mode circuits used in computing-in-memory circuits, our time-domain analog circuits use transient operation in charging/discharging processes to capacitors. Since the circuits can be designed without operational amplifiers, they can be operated with extremely low power consumption. However, they have to use very high-resistance devices, on the order of giga-ohms. We designed a CMOS VLSI chip to verify weighted-sum operation based on the proposed model with binary weights, which realizes the BinaryConnect model. In the chip, memory cells of static-random-access memory (SRAM) are used for synaptic connection weights. High-resistance operation was realized by using the subthreshold operation region of MOS transistors unlike the ordinary computing-in-memory circuits. The chip was designed and fabricated using a 250-nm fabrication technology. Measurement results showed that energy efficiency for the weighted-sum calculation was 300~TOPS/W (Tera-Operations Per Second per Watt), which is more than one order of magnitude higher than that in state-of-the-art digital AI processors, even though the minimum width of interconnection used in this chip was several times larger than that in such digital processors. If state-of-the-art VLSI technology is used to implement the proposed model, an energy efficiency of more than 1,000~TOPS/W will be possible. For practical applications, development of emerging analog memory devices such as ferroelectric-gate field effect transistors (FeFETs) is necessary.</summary>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-02-16T16:34:31Z</published>
+    <arxiv:comment>arXiv admin note: text overlap with arXiv:1810.06819</arxiv:comment>
+    <arxiv:primary_category term="cs.ET"/>
+    <author>
+      <name>Masatoshi Yamaguchi</name>
+    </author>
+    <author>
+      <name>Goki Iwamoto</name>
+    </author>
+    <author>
+      <name>Hakaru Tamukoh</name>
+    </author>
+    <author>
+      <name>Takashi Morie</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1810.06819v1</id>
+    <title>A Time-domain Analog Weighted-sum Calculation Model for Extremely Low Power VLSI Implementation of Multi-layer Neural Networks</title>
+    <updated>2018-10-16T05:41:01Z</updated>
+    <link href="https://arxiv.org/abs/1810.06819v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1810.06819v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A time-domain analog weighted-sum calculation model is proposed based on an integrate-and-fire-type spiking neuron model. The proposed calculation model is applied to multi-layer feedforward networks, in which weighted summations with positive and negative weights are separately performed in each layer and summation results are then fed into the next layers without their subtraction operation. We also propose very large-scale integrated (VLSI) circuits to implement the proposed model. Unlike the conventional analog voltage or current mode circuits, the time-domain analog circuits use transient operation in charging/discharging processes to capacitors. Since the circuits can be designed without operational amplifiers, they can operate with extremely low power consumption. However, they have to use very high resistance devices on the order of G$\rm Ω$. We designed a proof-of-concept (PoC) CMOS VLSI chip to verify weighted-sum operation with the same weights and evaluated it by post-layout circuit simulation using 250-nm fabrication technology. High resistance operation was realized by using the subthreshold operation region of MOS transistors. Simulation results showed that energy efficiency for the weighted-sum calculation was 290~TOPS/W, more than one order of magnitude higher than that in state-of-the-art digital AI processors, even though the minimum width of interconnection used in the PoC chip was several times larger than that in such digital processors. If state-of-the-art VLSI technology is used to implement the proposed model, an energy efficiency of more than 1,000~TOPS/W will be possible. For practical applications, development of emerging analog memory devices such as ferroelectric-gate FETs is necessary.</summary>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2018-10-16T05:41:01Z</published>
+    <arxiv:primary_category term="cs.ET"/>
+    <author>
+      <name>Quan Wang</name>
+    </author>
+    <author>
+      <name>Hakaru Tamukoh</name>
+    </author>
+    <author>
+      <name>Takashi Morie</name>
+    </author>
+  </entry>
+</feed>

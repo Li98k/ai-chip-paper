@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/7+aFzK6l60+xRB3wGjO53set8Fk</id>
+  <title>arXiv Query: search_query=abs:"in-memory computing" AND abs:"ADC" AND abs:"power"&amp;id_list=&amp;start=0&amp;max_results=6</title>
+  <updated>2026-10-09T14:56:06Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=abs:%22in-memory+computing%22+AND+(abs:%22ADC%22+AND+abs:%22power%22)&amp;start=0&amp;max_results=6&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>6</opensearch:itemsPerPage>
+  <opensearch:totalResults>8</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2408.06390v1</id>
+    <title>Approximate ADCs for In-Memory Computing</title>
+    <updated>2024-08-11T05:59:59Z</updated>
+    <link href="https://arxiv.org/abs/2408.06390v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.06390v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In memory computing (IMC) architectures for deep learning (DL) accelerators leverage energy-efficient and highly parallel matrix vector multiplication (MVM) operations, implemented directly in memory arrays. Such IMC designs have been explored based on CMOS as well as emerging non-volatile memory (NVM) technologies like RRAM. IMC architectures generally involve a large number of cores consisting of memory arrays, storing the trained weights of the DL model. Peripheral units like DACs and ADCs are also used for applying inputs and reading out the output values. Recently reported designs reveal that the ADCs required for reading out the MVM results, consume more than 85% of the total compute power and also dominate the area, thereby eschewing the benefits of the IMC scheme. Mitigation of imperfections in the ADCs, namely, non-linearity and variations, incur significant design overheads, due to dedicated calibration units. In this work we present peripheral aware design of IMC cores, to mitigate such overheads. It involves incorporating the non-idealities of ADCs in the training of the DL models, along with that of the memory units. The proposed approach applies equally well to both current mode as well as charge mode MVM operations demonstrated in recent years., and can significantly simplify the design of mixed-signal IMC units.</summary>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-11T05:59:59Z</published>
+    <arxiv:primary_category term="cs.ET"/>
+    <author>
+      <name>Arkapravo Ghosh</name>
+    </author>
+    <author>
+      <name>Hemkar Reddy Sadana</name>
+    </author>
+    <author>
+      <name>Mukut Debnath</name>
+    </author>
+    <author>
+      <name>Panthadip Maji</name>
+    </author>
+    <author>
+      <name>Shubham Negi</name>
+    </author>
+    <author>
+      <name>Sumeet Gupta</name>
+    </author>
+    <author>
+      <name>Mrigank Sharad</name>
+    </author>
+    <author>
+      <name>Kaushik Roy</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.20178v1</id>
+    <title>Design Space Exploration for ReRAM-based Architectures to Address Scaling Non-idealities</title>
+    <updated>2026-04-22T04:49:56Z</updated>
+    <link href="https://arxiv.org/abs/2604.20178v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.20178v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>ReRAM-based in-memory computing (IMC) architectures are promising candidates for energy-efficient matrix-vector multiplication. While scaling the size of ReRAM arrays allows for the amortization of power-hungry peripheral circuits like DACs and ADCs, it simultaneously introduces more parasitic along the signal path. Because of these challenges, current design methodologies often lack practical guidelines to balance these effects at early design stage, forcing designers to rely on time-consuming, iterative transistor-level simulations.
+  In this work, we propose a comprehensive framework for design space exploration that enables the selection of optimal array size, ADC resolution, and system frequency without requiring exhaustive simulations. The framework utilizes a specialized testbench to extract parameters from a limited set of representative transistor-level simulations. These parameters are then used to accurately predict the performance of arbitrary architectures. We demonstrate the effectiveness of this framework through two realistic design cases aimed at maximizing energy efficiency (TOPs/s/W). The results show that the framework successfully identifies optimal architectural configurations under strict power and error constraints, providing an efficient path for high-performance IMC design.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-22T04:49:56Z</published>
+    <arxiv:comment>4 pages, 7 figures</arxiv:comment>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Ching-Yi Lin</name>
+    </author>
+    <author>
+      <name>Sahil Shah</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.02099v1</id>
+    <title>Multiplier-free In-Memory Vector-Matrix Multiplication Using Distributed Arithmetic</title>
+    <updated>2025-10-02T15:06:00Z</updated>
+    <link href="https://arxiv.org/abs/2510.02099v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.02099v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Vector-Matrix Multiplication (VMM) is the fundamental and frequently required computation in inference of Neural Networks (NN). Due to the large data movement required during inference, VMM can benefit greatly from in-memory computing. However, ADC/DACs required for in-memory VMM consume significant power and area. `Distributed Arithmetic (DA)', a technique in computer architecture prevalent in 1980s was used to achieve inner product or dot product of two vectors without using a hard-wired multiplier when one of the vectors is a constant. In this work, we extend the DA technique to multiply an input vector with a constant matrix. By storing the sum of the weights in memory, DA achieves VMM using shift-and-add circuits in the periphery of ReRAM memory. We verify functional and also estimate non-functional properties (latency, energy, area) by performing transistor-level simulations. Using energy-efficient sensing and fine grained pipelining, our approach achieves 4.5 x less latency and 12 x less energy than VMM performed in memory conventionally by bit slicing. Furthermore, DA completely eliminated the need for power-hungry ADCs which are the main source of area and energy consumption in the current VMM implementations in memory.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-02T15:06:00Z</published>
+    <arxiv:comment>9 pages, 10 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Felix Zeller</name>
+    </author>
+    <author>
+      <name>John Reuben</name>
+    </author>
+    <author>
+      <name>Dietmar Fey</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.13950v1</id>
+    <title>NL-DPE: An Analog In-memory Non-Linear Dot Product Engine for Efficient CNN and LLM Inference</title>
+    <updated>2025-11-17T22:09:57Z</updated>
+    <link href="https://arxiv.org/abs/2511.13950v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.13950v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Resistive Random Access Memory (RRAM) based in-memory computing (IMC) accelerators offer significant performance and energy advantages for deep neural networks (DNNs), but face three major limitations: (1) they support only \textit{static} dot-product operations and cannot accelerate arbitrary non-linear functions or data-dependent multiplications essential to modern LLMs; (2) they demand large, power-hungry analog-to-digital converter (ADC) circuits; and (3) mapping model weights to device conductance introduces errors from cell nonidealities. These challenges hinder scalable and accurate IMC acceleration as models grow.
+  We propose NL-DPE, a Non-Linear Dot Product Engine that overcomes these barriers. NL-DPE augments crosspoint arrays with RRAM-based Analog Content Addressable Memory (ACAM) to execute arbitrary non-linear functions and data-dependent matrix multiplications in the analog domain by transforming them into decision trees, fully eliminating ADCs. To address device noise, NL-DPE uses software-based Noise Aware Fine-tuning (NAF), requiring no in-device calibration. Experiments show that NL-DPE delivers 28X energy efficiency and 249X speedup over a GPU baseline, and 22X energy efficiency and 245X speedup over existing IMC accelerators, while maintaining high accuracy.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-17T22:09:57Z</published>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Lei Zhao</name>
+    </author>
+    <author>
+      <name>Luca Buonanno</name>
+    </author>
+    <author>
+      <name>Archit Gajjar</name>
+    </author>
+    <author>
+      <name>John Moon</name>
+    </author>
+    <author>
+      <name>Aishwarya Natarajan</name>
+    </author>
+    <author>
+      <name>Sergey Serebryakov</name>
+    </author>
+    <author>
+      <name>Ron M. Roth</name>
+    </author>
+    <author>
+      <name>Xia Sheng</name>
+    </author>
+    <author>
+      <name>Youtao Zhang</name>
+    </author>
+    <author>
+      <name>Paolo Faraboschi</name>
+    </author>
+    <author>
+      <name>Jim Ignowski</name>
+    </author>
+    <author>
+      <name>Giacomo Pedretti</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.14162v1</id>
+    <title>Time Domain Near Memory Computing Engine</title>
+    <updated>2026-05-13T22:31:07Z</updated>
+    <link href="https://arxiv.org/abs/2605.14162v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.14162v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The increasing computational demand of AI workloads has intensified the need for energy-efficient in-memory and near-memory computing architectures, particularly because data movement often consumes significantly more energy than computation itself. While fully digital architectures provide robust scalability and support higher-resolution computation, analog in-memory computing has demonstrated improved energy efficiency for low-precision workloads. However, its reliance on peripheral DACs and ADCs introduces additional power, area, and design overhead. To address these challenges, this work presents a time-domain near-memory computing architecture for low-precision multiply-and-accumulate (MAC) operations. In the proposed approach, digital weight bits stored in SRAM are converted using a current-steering DAC, while the digital input vector is encoded by an N-pulse generator. This enables multiplication to be performed in the time domain while maintaining a digital-friendly interface. Two accumulation schemes, a delay-cell-based architecture and a counter-based architecture, are investigated and compared in terms of design trade-offs, linearity, scalability, and power efficiency. To improve technology portability, the N-pulse generator and counters are implemented using RTL synthesis, while the current-steering DAC remains in the analog domain. A 4 x 4 MAC prototype is implemented with a 1 V supply, achieving an operating frequency of 40 MHz, power consumption of 42 uW, and energy efficiency of 7.62 TOPS/W.</summary>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-13T22:31:07Z</published>
+    <arxiv:comment>8 pages, 9 figures, 1 Comparison Table</arxiv:comment>
+    <arxiv:primary_category term="cs.ET"/>
+    <author>
+      <name>Sarthak Antal</name>
+    </author>
+    <author>
+      <name>Steve Enosh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.15123v1</id>
+    <title>NIFA: Nonlinear IMC enhanced FPGA for efficient ML inference</title>
+    <updated>2026-07-16T15:32:44Z</updated>
+    <link href="https://arxiv.org/abs/2607.15123v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.15123v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent FPGAs have improved deep learning (DL) inference efficiency through dedicated tensor blocks and in-BRAM computation. ReRAM-based analog in-memory computing (IMC) pushes efficiency further, offering an order-of-magnitude improvement in compute density and energy efficiency over conventional digital logic by performing vector-matrix multiplication (VMM) directly within the ReRAM crossbar; prior work has integrated such IMC blocks into FPGAs for DL inference. However, conventional IMC designs support only static-weight VMM, leaving nonlinear operations and dynamic matrix-matrix multiplication (DIMM) to the FPGA fabric. As a result, the benefits of IMC are largely confined to static-weight models, whereas Transformer-based models, which rely on frequent nonlinear and DIMM operations, gain only limited improvement. Moreover, the ADCs within each IMC block consume more than 70% of its area and power, further limiting system efficiency and scalability. To address these limitations, we propose a novel FPGA architecture that integrates an ADC-free IMC block, replacing the conventional ADC with analog content-addressable memories (ACAMs) that natively perform nonlinear operations inside the block. To fully exploit this block, we conduct an FPGA-aware design-space exploration that determines optimal crossbar dimensions while balancing FPGA area, flexibility, and DL performance, and we develop an efficient mapping that leverages ACAMs to carry out DIMM operations, extending the applicability of IMC to attention computation. On CNN and Transformer-based benchmarks, the proposed architecture achieves up to 40x and 1.9x higher energy efficiency and 4.1x and 2.5x higher area efficiency, respectively. Overall, it significantly improves FPGA DL inference efficiency and sustains robust gains on Transformer-based workloads across long input sequences, advancing domain-specialized FPGA design.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-16T15:32:44Z</published>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Jiajun Hu</name>
+    </author>
+    <author>
+      <name>Ruthwik Reddy Sunketa</name>
+    </author>
+    <author>
+      <name>Lei Zhao</name>
+    </author>
+    <author>
+      <name>Archit Gajjar</name>
+    </author>
+    <author>
+      <name>Luca Buonanno</name>
+    </author>
+    <author>
+      <name>Aman Arora</name>
+    </author>
+  </entry>
+</feed>

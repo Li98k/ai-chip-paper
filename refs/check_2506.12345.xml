@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/3sECWNu/9gVkesyIFL+0r1yIJfk</id>
+  <title>arXiv Query: search_query=&amp;id_list=2506.12345&amp;start=0&amp;max_results=10</title>
+  <updated>2026-10-09T15:34:47Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2506.12345" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2506.12345v1</id>
+    <title>Extracting Composition-Dependent Diffusion Coefficients Over a Very Large Composition Range in NiCoFeCrMn High Entropy Alloy Following Strategic Design of Diffusion Couples and Physics Informed Neural Network Numerical Method</title>
+    <updated>2025-06-14T04:49:24Z</updated>
+    <link href="https://arxiv.org/abs/2506.12345v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.12345v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Estimating composition dependent diffusion coefficients in multicomponent alloys was a longstanding challenge due to limitations in experimental methods. In this study, we have first demonstrated a strategic design of producing only three diffusion couples to estimate all types, that is tracer, intrinsic, and interdiffusion coefficients at the Kirkendall marker planes. This establishes a systematic variation of diffusion coefficients with composition in a very wide composition range of the NiCoFeCrMn system in comparison to the data available on impurity diffusion coefficients in pure elements and tracer diffusion coefficients at the equiatomic composition estimated by the radiotracer method. Following, a physics-informed Neural Network based numerical inverse method is developed to extract composition-dependent diffusivities over the whole composition range of the diffusion couples.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-14T04:49:24Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Suman Sadhu</name>
+    </author>
+    <author>
+      <name>Saswata Bhattacharyya</name>
+    </author>
+    <author>
+      <name>Aloke Paul</name>
+    </author>
+  </entry>
+</feed>

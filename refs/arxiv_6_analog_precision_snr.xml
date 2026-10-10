@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/eHyRLEvNd4xWE6IgN1JCAvXsg1Y</id>
+  <title>arXiv Query: search_query=all:"analog compute" AND all:"precision" AND all:"SNR"&amp;id_list=&amp;start=0&amp;max_results=8</title>
+  <updated>2026-10-09T14:16:40Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22analog+compute%22+AND+(all:%22precision%22+AND+all:%22SNR%22)&amp;start=0&amp;max_results=8&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>8</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2401.15061v1</id>
+    <title>Digital-analog hybrid matrix multiplication processor for optical neural networks</title>
+    <updated>2024-01-26T18:42:57Z</updated>
+    <link href="https://arxiv.org/abs/2401.15061v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.15061v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The computational demands of modern AI have spurred interest in optical neural networks (ONNs) which offer the potential benefits of increased speed and lower power consumption. However, current ONNs face various challenges,most significantly a limited calculation precision (typically around 4 bits) and the requirement for high-resolution signal format converters (digital-to-analogue conversions (DACs) and analogue-to-digital conversions (ADCs)). These challenges are inherent to their analog computing nature and pose significant obstacles in practical implementation. Here, we propose a digital-analog hybrid optical computing architecture for ONNs, which utilizes digital optical inputs in the form of binary words. By introducing the logic levels and decisions based on thresholding, the calculation precision can be significantly enhanced. The DACs for input data can be removed and the resolution of the ADCs can be greatly reduced. This can increase the operating speed at a high calculation precision and facilitate the compatibility with microelectronics. To validate our approach, we have fabricated a proof-of-concept photonic chip and built up a hybrid optical processor (HOP) system for neural network applications. We have demonstrated an unprecedented 16-bit calculation precision for high-definition image processing, with a pixel error rate (PER) as low as $1.8\times10^{-3}$ at an signal-to-noise ratio (SNR) of 18.2 dB. We have also implemented a convolutional neural network for handwritten digit recognition that shows the same accuracy as the one achieved by a desktop computer. The concept of the digital-analog hybrid optical computing architecture offers a methodology that could potentially be applied to various ONN implementations and may intrigue new research into efficient and accurate domain-specific optical computing architectures for neural networks.</summary>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-26T18:42:57Z</published>
+    <arxiv:primary_category term="cs.NE"/>
+    <author>
+      <name>Xiansong Meng</name>
+    </author>
+    <author>
+      <name>Deming Kong</name>
+    </author>
+    <author>
+      <name>Kwangwoong Kim</name>
+    </author>
+    <author>
+      <name>Qiuchi Li</name>
+    </author>
+    <author>
+      <name>Po Dong</name>
+    </author>
+    <author>
+      <name>Ingemar J. Cox</name>
+    </author>
+    <author>
+      <name>Christina Lioma</name>
+    </author>
+    <author>
+      <name>Hao Hu</name>
+    </author>
+  </entry>
+</feed>

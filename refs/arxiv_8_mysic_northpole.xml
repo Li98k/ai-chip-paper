@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api//YwxQGmT+u2p0nW7+RVsUT/7yzI</id>
+  <title>arXiv Query: search_query=all:"Mythic" OR all:"NorthPole" OR all:"Syntiant" AND all:"analog" AND all:"AI"&amp;id_list=&amp;start=0&amp;max_results=8</title>
+  <updated>2026-10-09T14:16:51Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22Mythic%22+OR+(all:%22NorthPole%22+OR+(all:%22Syntiant%22+AND+(all:%22analog%22+AND+all:%22AI%22)))&amp;start=0&amp;max_results=8&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>8</opensearch:itemsPerPage>
+  <opensearch:totalResults>39</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2511.15950v1</id>
+    <title>A Scalable NorthPole System with End-to-End Vertical Integration for Low-Latency and Energy-Efficient LLM Inference</title>
+    <updated>2025-11-20T00:53:44Z</updated>
+    <link href="https://arxiv.org/abs/2511.15950v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.15950v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A vertically integrated, end-to-end, research prototype system combines 288 NorthPole neural inference accelerator cards, offline training algorithms, a high-performance runtime stack, and a containerized inference pipeline to deliver a scalable and efficient cloud inference service. The system delivers 115 peta-ops at 4-bit integer precision and 3.7 PB/s of memory bandwidth across 18 2U servers, while consuming only 30 kW of power and weighing 730 kg in a 0.67 m^2 42U rack footprint. The system can run 3 simultaneous instances of the 8-billion-parameter open-source IBM Granite-3.3-8b-instruct model at 2,048 context length with 28 simultaneous users and a per-user inter-token latency of 2.8 ms. The system is scalable, modular, and reconfigurable, supporting various model sizes and context lengths, and is ideal for deploying agentic workflows for enterprise AI applications in existing data center (cloud, on-prem) environments. For example, the system can support 18 instances of a 3-billion-parameter model or a single instance of a 70-billion-parameter model.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-20T00:53:44Z</published>
+    <arxiv:primary_category term="cs.DC"/>
+    <author>
+      <name>Michael V. DeBole</name>
+    </author>
+    <author>
+      <name>Rathinakumar Appuswamy</name>
+    </author>
+    <author>
+      <name>Neil McGlohon</name>
+    </author>
+    <author>
+      <name>Brian Taba</name>
+    </author>
+    <author>
+      <name>Steven K. Esser</name>
+    </author>
+    <author>
+      <name>Filipp Akopyan</name>
+    </author>
+    <author>
+      <name>John V. Arthur</name>
+    </author>
+    <author>
+      <name>Arnon Amir</name>
+    </author>
+    <author>
+      <name>Alexander Andreopoulos</name>
+    </author>
+    <author>
+      <name>Peter J. Carlson</name>
+    </author>
+    <author>
+      <name>Andrew S. Cassidy</name>
+    </author>
+    <author>
+      <name>Pallab Datta</name>
+    </author>
+    <author>
+      <name>Myron D. Flickner</name>
+    </author>
+    <author>
+      <name>Rajamohan Gandhasri</name>
+    </author>
+    <author>
+      <name>Guillaume J. Garreau</name>
+    </author>
+    <author>
+      <name>Megumi Ito</name>
+    </author>
+    <author>
+      <name>Jennifer L. Klamo</name>
+    </author>
+    <author>
+      <name>Jeffrey A. Kusnitz</name>
+    </author>
+    <author>
+      <name>Nathaniel J. McClatchey</name>
+    </author>
+    <author>
+      <name>Jeffrey L. McKinstry</name>
+    </author>
+    <author>
+      <name>Tapan K. Nayak</name>
+    </author>
+    <author>
+      <name>Carlos Ortega Otero</name>
+    </author>
+    <author>
+      <name>Hartmut Penner</name>
+    </author>
+    <author>
+      <name>William P. Risk</name>
+    </author>
+    <author>
+      <name>Jun Sawada</name>
+    </author>
+    <author>
+      <name>Jay Sivagnaname</name>
+    </author>
+    <author>
+      <name>Daniel F. Smith</name>
+    </author>
+    <author>
+      <name>Rafael Sousa</name>
+    </author>
+    <author>
+      <name>Ignacio Terrizzano</name>
+    </author>
+    <author>
+      <name>Takanori Ueda</name>
+    </author>
+    <author>
+      <name>Trent Gray-Donald</name>
+    </author>
+    <author>
+      <name>David Cox</name>
+    </author>
+    <author>
+      <name>Dharmendra S. Modha</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2101.00255v2</id>
+    <title>Mythical Thought in Bohr's Anti-Realist Realism (Or: Lessons on How to Capture and Defeat Smoky Dragons)</title>
+    <updated>2022-08-22T20:02:08Z</updated>
+    <link href="https://arxiv.org/abs/2101.00255v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2101.00255v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this work we argue that the power and effectiveness of the Bohrian approach to quantum mechanics is essentially grounded on an inconsistent form of anti-realist realism which supports not only the uncritical tolerance -- in physics -- towards the "standard" account of the theory of quanta but also -- in philosophy -- to the mad reproduction of mythical (inconsistent and vague) narratives -- known as "interpretations". We will discuss the existence of -- what John Archibald Wheeler named -- "smoky dragons" not only within the standard formulation of the theory but also within the many interpretations that have been -- later on -- introduced by philosophers and philosophically inclined physicists. After analyzing the role of smoky dragons within both contemporary physics and philosophy of physics we will propose a general procedure grounded on a series of necessary theoretical conditions for producing meaningful physical concepts that -- hopefully -- could be used as tools and weapons to capture and defeat these beautiful and powerful mythical creatures.</summary>
+    <category term="physics.hist-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-01-01T15:53:48Z</published>
+    <arxiv:comment>25 pages, 1 smoky dragon</arxiv:comment>
+    <arxiv:primary_category term="physics.hist-ph"/>
+    <author>
+      <name>Christian de Ronde</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/math/0004006v2</id>
+    <title>A naive question about quantum groups</title>
+    <updated>2009-07-22T09:14:23Z</updated>
+    <link href="https://arxiv.org/abs/math/0004006v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/math/0004006v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The category O of BGG can be thought of as a category of sheaves over the flag variety F in the sense that the algebra E of self-extensions of the trivial object of O is isomorphic to the cohomology algebra of the flag variety. A deformation of O' - giving rise to a "new" algebra E' - can be thought of as a (possibly noncommutative) deformation F' of F. The mythic variety F', being a deformation of F, should have the same homotopy type as F, and E' should therefore be isomorphic to E.</summary>
+    <category term="math.QA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2000-04-02T11:06:00Z</published>
+    <arxiv:comment>4 pages, TeX</arxiv:comment>
+    <arxiv:primary_category term="math.QA"/>
+    <author>
+      <name>Pierre-Yves Gaillard</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.15078v1</id>
+    <title>Computable Structuralism: A Categorical Rewrite Calculus of Mythic Variants</title>
+    <updated>2026-01-21T15:23:11Z</updated>
+    <link href="https://arxiv.org/abs/2601.15078v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.15078v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Structural approaches to myth and narrative are compelling in close reading but hard to compare across traditions, media, and scale. We propose a formal framework that renders Lévi-Straussian transformation as mathematics while remaining readable as narrative analysis. Variants, superhero continuities, and franchise arcs are modeled as typed rewrite programs on a coupled two-register state $(X,Y)$, abstracting an everyday/social channel and a symbolic/legitimation channel. The canonical formula becomes coherence data: a natural transformation $η:U\Rightarrow V$ between update endofunctors, where $U$ updates each register in place and $V$ performs a swap+inversion. Context is internalized by operator choice, turning naturality into a corpus-facing type check: failures diagnose mis-specified oppositions or illegal transport; successes witness coherent structural models. Order effects are summarized by a five-value invariant (Key). We apply the method to 80 narratives (20 folktales, 20 religious myths, 20 superheroes, 20 franchises), each encoded as $(a,b,x,y)$ with a Key. 59/80 (74\%) explicitly name a normative constraint in $y$ (law, taboo, contract, prophecy), supporting the two-register abstraction. The result is a testable bridge between structural anthropology and cultural analytics: stories remain interpretable yet become transportable objects for computation, comparison, and falsifiable constraints on transformation.</summary>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.CT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-21T15:23:11Z</published>
+    <arxiv:primary_category term="cs.SI"/>
+    <author>
+      <name>Juan J. Segura</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.09596v1</id>
+    <title>The Mythical Good Software</title>
+    <updated>2025-07-13T11:57:12Z</updated>
+    <link href="https://arxiv.org/abs/2507.09596v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.09596v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Good software has high cohesion and low coupling is clumsy, obscure, and in some certain cases could be actually a harmful state of being. It is clumsy because there is no perfect correlation between higher cohesiveness and optimum design, and it is obscure because it conveys the message that coupling and cohesion are two distinct design principles, while there are in principle the same design approaches, and only the time and space differ between them, and it could also be a harmful state of being because we should not always aim for higher cohesiveness without considering its cost.
+  In the course of this study, we aim to elucidate for the readers the meaning and underlying philosophy of the aforementioned paragraph.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-13T11:57:12Z</published>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Aydin Homay</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1406.7581v1</id>
+    <title>The Mythical Swing Voter</title>
+    <updated>2014-06-30T02:33:59Z</updated>
+    <link href="https://arxiv.org/abs/1406.7581v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1406.7581v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The only acceptable form of polling in the multi-billion dollar survey research field utilizes representative samples. We argue that with proper statistical adjustment, non-representative polling can provide accurate predictions, and often in a much more timely and cost-effective fashion. We demonstrate this by applying multilevel regression and post-stratification (MRP) to a 2012 election survey on the Xbox gaming platform. Not only do the transformed top-line projections from this data closely trend standard indicators, but we use the unique nature of the data's size and panel to answer a meaningful political puzzle. We find that reported swings in public opinion polls are generally not due to actual shifts in vote intention, but rather are the result of temporary periods of relatively low response rates among supporters of the reportedly slumping candidate. This work shows great promise for using non-representative polling to measure public opinion and the first product of this new polling technique raises the possibility that decades of large, reported swings in public opinion-including the perennial "convention bounce"-are mostly artifacts of sampling bias.</summary>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-06-30T02:33:59Z</published>
+    <arxiv:primary_category term="cs.SI"/>
+    <author>
+      <name>David Rothschild</name>
+    </author>
+    <author>
+      <name>Sharad Goel</name>
+    </author>
+    <author>
+      <name>Andrew Gelman</name>
+    </author>
+    <author>
+      <name>Doug Rivers</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.01909v2</id>
+    <title>On Catastrophic Inheritance of Large Foundation Models</title>
+    <updated>2024-10-23T00:40:23Z</updated>
+    <link href="https://arxiv.org/abs/2402.01909v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.01909v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large foundation models (LFMs) are claiming incredible performances. Yet great concerns have been raised about their mythic and uninterpreted potentials not only in machine learning, but also in various other disciplines. In this position paper, we propose to identify a neglected issue deeply rooted in LFMs: Catastrophic Inheritance, describing the weaknesses and limitations inherited from biased large-scale pre-training data to behaviors of LFMs on the downstream tasks, including samples that are corrupted, long-tailed, noisy, out-of-distributed, to name a few. Such inheritance can potentially cause catastrophes to downstream applications, such as bias, lack of generalization, deteriorated performance, security vulnerability, privacy leakage, and value misalignment. We discuss the challenges behind this issue and propose UIM, a framework to Understand the catastrophic inheritance of LFMs from both pre-training and downstream adaptation, Interpret the implications of catastrophic inheritance on downstream tasks, and how to Mitigate it. UIM aims to unite both the machine learning and social sciences communities for more responsible and promising AI development and deployment.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-02T21:21:55Z</published>
+    <arxiv:comment>Accepted by DMLR</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Hao Chen</name>
+    </author>
+    <author>
+      <name>Bhiksha Raj</name>
+    </author>
+    <author>
+      <name>Xing Xie</name>
+    </author>
+    <author>
+      <name>Jindong Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.27801v1</id>
+    <title>Engineering Mythology: A Digital-Physical Framework for Culturally-Inspired Public Art</title>
+    <updated>2026-03-29T18:31:33Z</updated>
+    <link href="https://arxiv.org/abs/2603.27801v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.27801v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Navagunjara Reborn: The Phoenix of Odisha was built for Burning Man 2025 as both a sculpture and an experiment-a fusion of myth, craft, and computation. This paper describes the digital-physical workflow developed for the project: a pipeline that linked digital sculpting, distributed fabrication by artisans in Odisha (India), modular structural optimization in the U.S., iterative feedback through photogrammetry and digital twins, and finally, one-shot full assembly at the art site in Black Rock Desert, Nevada. The desert installation tested not just materials, but also systems of collaboration: between artisans and engineers, between myth and technology, between cultural specificity and global experimentation. We share the lessons learned in design, fabrication, and deployment and offer a framework for future interdisciplinary projects at the intersection of cultural heritage, STEAM education, and public art. In retrospect, this workflow can be read as a convergence of many knowledge systems-artisan practice, structural engineering, mythic narrative, and environmental constraint-rather than as execution of a single fixed blueprint.</summary>
+    <category term="cs.GR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-29T18:31:33Z</published>
+    <arxiv:comment>19 pages, 28 figures, 4 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.GR"/>
+    <author>
+      <name>Jnaneshwar Das</name>
+    </author>
+    <author>
+      <name>Christopher Filkins</name>
+    </author>
+    <author>
+      <name>Rajesh Moharana</name>
+    </author>
+    <author>
+      <name>Ekadashi Barik</name>
+    </author>
+    <author>
+      <name>Bishweshwar Das</name>
+    </author>
+    <author>
+      <name>David Ayers</name>
+    </author>
+    <author>
+      <name>Christopher Skiba</name>
+    </author>
+    <author>
+      <name>Rodney Staggers</name>
+    </author>
+    <author>
+      <name>Mark Dill</name>
+    </author>
+    <author>
+      <name>Swig Miller</name>
+    </author>
+    <author>
+      <name>Daniel Tulberg</name>
+    </author>
+    <author>
+      <name>Patrick Smith</name>
+    </author>
+    <author>
+      <name>Seth Brink</name>
+    </author>
+    <author>
+      <name>Kyle Breen</name>
+    </author>
+    <author>
+      <name>Harish Anand</name>
+    </author>
+    <author>
+      <name>Ramon Arrowsmith</name>
+    </author>
+  </entry>
+</feed>
