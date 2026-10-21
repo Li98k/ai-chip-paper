@@ -10,7 +10,7 @@ import numpy as np, matplotlib, os
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.patches import Circle, FancyBboxPatch, Rectangle
-plt.rcParams["font.sans-serif"]=["Noto Sans CJK SC","WenQuanYi Zen Hei","SimHei","DejaVu Sans"]
+plt.rcParams["font.sans-serif"]=["Noto Sans CJK SC","Noto Sans CJK JP","Droid Sans Fallback","WenQuanYi Zen Hei","SimHei","DejaVu Sans"]
 plt.rcParams["axes.unicode_minus"]=False
 OUT=os.path.dirname(os.path.abspath(__file__))+"/figs"; os.makedirs(OUT,exist_ok=True)
 

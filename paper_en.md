@@ -66,7 +66,7 @@ Simulation sim_v1b (full Ebers–Moll, W = 4096, R0 = 40 kΩ, R_E = 100 Ω, IC0 
     a = 1.0: IC = 7.46 mA   (multiples of IC0 = 13.6 → 74.6, an e^{a·V/VT} bend)
 i.e. I_C is exponential, not linear, in the input. It is approximately linear only in a very small local region (±10–20 mV swing), while LLM activation swing is ~100 mV in magnitude — it cannot be linear overall.
 
-**Problem 2: Common-mode DC.** The base-node voltage "floats" at V_BE ≈ 650–700 mV, whereas the signal is a 0–100 mV floating level — the resistor network back-feeds milliamps of DC from the signal sources (sim_v5 measures 2.56 mA/node), collapsing both power and dynamic range.
+**Problem 2: Common-mode DC.** The base-node voltage "floats" at V_BE ≈ 650–700 mV, whereas the signal is a 0–100 mV floating level — the resistor network back-feeds DC from the signal sources (sim_v5 measures 1.10 mA/node naive back-feed, cut to a −0.02 mA residual by differential virtual ground), collapsing both power and dynamic range.
 
 **Conclusion: the user's verbatim topology must be corrected.** The correction is to make the summing node a **virtual ground (virtual ground, constant ≈ V_BE)** and inject the signal as **current**:
     I_j   = x_j / R_j = x_j·w_j/R0
@@ -83,11 +83,11 @@ So the "transistor amplification" idea holds and is necessary in the sense of �
 
 sim_v4 (physically self-consistent version: correct I_E·R_E feedback + bisection solve) at the R_E = 1–2.6 kΩ, IC0 = 200 µA design point shows max nonlinearity < 0.2 % over the full 0–100 mV sweep — meeting the INT8 global linearity requirement. sim_v5b (current-mode virtual ground) further verifies:
     C1 summation exactness: deviation from ideal Σw·x < 1e-12 (pure algebraic identity)
-    C5 tolerance 1% → output error 1.32% (mean), 0.1% → 0.13%
+    C5 tolerance ±1% → output error mean 0.54% / p95 1.31%, ±0.1% → mean 0.05% / p95 0.13%
 
 **Key insight (tolerance does not accumulate with W):** the relative error of each sum term cancels statistically in the Σ (the Σ of independent random errors grows as √W while the signal grows as W), hence
     output error ≈ cell tolerance × O(1)
-At W = 4096 a 1 % tolerance produces only 1.32 % (not 4096× 1 %!). This is an important statistical dividend of the crossbar architecture over per-cell digital circuits.
+At W = 4096 a 1 % tolerance produces only p95 1.31 % (mean 0.54 %, not 4096× 1 %!). This is an important statistical dividend of the crossbar architecture over per-cell digital circuits.
 
 ### 2.3 Three-Layer Wiring Schematic (Figure 6, sim_v11 numerical verification)
 
@@ -137,23 +137,28 @@ Construct the crossbar summing node directly: W branches, branch j thermal-noise
 
 ### 3.2 Resistor Tolerance (sim_v5b C5, Monte-Carlo 300 samples)
 
-    tolerance 1%   → output error mean 1.32%, p95 ~2%   (INT4 usable, INT8 not met)
-    tolerance 0.1% → output error 0.13%                 (INT8 met)
+    tolerance ±1%   → output error mean 0.54%, p95 1.31%  (INT4 usable, INT8 not met)
+    tolerance ±0.1% → output error mean 0.05%, p95 0.13%  (INT8 met)
 Two engineering paths:
   (a) Use 0.1 % thin-film resistors / RRAM calibration (on-chip self-calibration loop, one-time overhead);
   (b) Mismatch-aware training (arXiv 1606.07786): fold measured cell mismatch as a constraint into NN training so the network "learns" its own imprecision — 1 % tolerance devices can approach INT8 precision. This is naturally compatible with the "parameters written once and never changed" architecture (calibration data can be injected post-fab).
 
-### 3.3 Depth Accumulation (sim_v7/v8, 6-layer MLP end-to-end)
+### 3.3 Depth Accumulation (sim_v7/v8/v16, 6-layer MLP end-to-end)
 
 Full analog chain per layer: tolerance weights + summing thermal noise + BJT readout ±1 % mismatch + N-bit ADC.
 
-    per-layer cosine (layer out vs digital ideal): 0.9997   (analog summation itself is extremely accurate)
-    final-layer cosine:
-      8-bit ADC + noise @ 10 MOPS:  0.79
-      16-bit ADC:                   0.79   (ADC bits are not the bottleneck; thermal noise is)
-      0.1% vs 1% tolerance:         nearly no difference (Σ cancellation)
+    per-layer cosine (layer out vs digital ideal): L1 0.9997, then a gentle slope:
+      L2 0.998 → L3 0.991 → L4 0.960 → L5 0.83 (network-averaged, sim_v16)
+    final-layer cosine (authoritative multi-seed values, sim_v16: 10 nets × 20 MC,
+    BW = 1.6 MHz ≈ 3.2 MOPS/node, tol = 1%):
+      mean 0.829 ± 0.024, range [0.779, 0.865]
+      (single-net single-run values: 0.889 (v7, seed 42) / 0.791 (v8, seed 7)
+       — implementation spread, not a model difference)
+      16-bit ADC:            0.829   (ADC bits are not the bottleneck; thermal noise is)
+      0.1% vs 1% tolerance:  nearly no difference (Σ cancellation)
+      Recovery BW=0.5MHz(=1MOPS): mean 0.928, range [0.898, 0.947]
 
-Interpretation: 0.79 retention after 6 layers means the network "still works but with visible accuracy loss"; the recovery levers are explicit — drop per-node throughput to 1 MOPS (SNR ≈ 53.6 dB) or drop R0 to 288 kΩ (INT8 median window), and final-layer cosine returns to 0.9+. **Note: non-linear normalization ops such as softmax/LayerNorm do not belong to the linear layers and must be implemented digitally** (or in analog piecewise) — these are the "digital islands" that alternate per layer in an LLM, and they count into the overall energy-efficiency evaluation.
+Interpretation: the final-layer cosine distribution of 0.78–0.87 (mean 0.83, sim_v16 multi-seed) means the network "still works but with visible accuracy loss"; the recovery levers are explicit — drop per-node throughput to 1 MOPS (bandwidth ×0.316, SNR +5 dB; cross-seed mean 0.928) or drop R0 to 288 kΩ (INT8 median window), and final-layer cosine returns to 0.9+ (the 0.928 mean is cross-seed stable). **Note: non-linear normalization ops such as softmax/LayerNorm do not belong to the linear layers and must be implemented digitally** (or in analog piecewise) — these are the "digital islands" that alternate per layer in an LLM, and they count into the overall energy-efficiency evaluation.
 
 ---
 
@@ -324,7 +329,8 @@ This corresponds word-for-word to the user's idea (transistor + tunable resistor
 |------|------|------|------------------|
 | 1989 | ANNA (16000 synapses) | Earliest large-scale analog NN chip, resistors as weights, bipolar process | **Direct precursor of the user's scheme** (also used BJT-era devices) |
 | 1990s | Analog VLSI NN wave | Hopfield / associative-memory chips | Faded due to precision and device drift |
-| 2016 | IBM NorthPole (Shafiee, ISSCC) | 256×256 ReRAM systolic analog accelerator, 158 TOPS/W | Engineering of the current-mode crossbar |
+| 2016 | ISAAC (Shafiee et al., ISCA) | 45 nm ReRAM crossbar analog in-memory CNN accelerator | Engineering of the current-mode crossbar |
+| 2019–2023 | IBM NorthPole (Hahn et al.) | Near-memory **digital** inference chip (not an analog crossbar; erratum: a different work from ISAAC — the old "NorthPole 2016 / 158 TOPS/W" had no source and is removed) | Near-memory inference engineering (2025 LLM system in ref. 9) |
 | 2018 | Mythic "Mythic multiplies in a flash" (Demler) | Flash crossbar commercial analog accelerator | Proved "parameters written into memory" can be productized |
 | 2019 | Xia & Yang, memristive crossbars | Device-level survey | Resistor/memristor non-negative → sign problem |
 | 2023 | Bowen 2302.06417 | Energy-limit theory: fixed-weight e_op ∝ 1/N | Theoretical endorsement of the user's energy selling point |
@@ -336,7 +342,7 @@ The scheme is not a "brand-new invention," but a **re-quantification in three co
 
 1. **A rigorous Monte-Carlo characterization of the SNR scaling law:** SNR is independent of W, ∝ R0^−½, ∝ throughput^−½, giving a (R0, throughput) design-window plot (Figure 5) — directly answering "how to choose R0 and clock to get INT8";
 2. **Quantifying the "parameters-into-hardware" area tax + the process-node boundary:** 1 parameter = 1 cell → 27 B maps to 45 nm (1080 cm² / ≈126 reticle), 7 nm (27 cm²), 3 nm (10.9 cm² / 1.3 reticle) (Figure 4), identifying ~3–5 nm as the process boundary where this scheme goes from "must be multi-chip" to "single package";
-3. **An end-to-end depth-accumulation experiment:** 6-layer MLP per-layer 0.9997 → final 0.79 (10 MOPS), quantifying the real accuracy cost of "analog per-layer transfer," and giving a combined recovery strategy (drop throughput / larger R0 / mismatch-aware training).
+3. **An end-to-end depth-accumulation experiment (multi-seed calibrated):** 6-layer MLP per-layer 0.9997 → final 0.829 ± 0.024 (10 nets × 20 MC, ≈3.2 MOPS/node), quantifying the real accuracy cost of "analog per-layer transfer," and giving a combined recovery strategy (drop throughput to 1 MOPS → 0.928 / larger R0 / mismatch-aware training) that is stable across seeds.
 
 In addition, the user's scheme's **retention of the transistor as the readout/linearization device** (rather than a purely digital readout) has independent value in the "low-voltage, large-swing analog domain": the BJT transconductance g_m = IC0/V_T provides a mA-scale swing current at mV-scale voltages, more suitable for analog readout in the subthreshold voltage than a CMOS transistor (which needs 100 mV+ overdrive) — this is consistent with ANNA's (1989, bipolar process) historical choice, but regains "low-voltage readout" significance in the RRAM era.
 
@@ -364,7 +370,7 @@ Under these conditions, an "LLM linear-layer inference chip with parameters writ
 | 2 | Eliminates the memory wall: weights = the silicon itself | 27 B @ 3 nm: 11 cm² whole die is weights, zero DRAM reads |
 | 3 | Natural spatial parallelism: one layer sum = one settling time | τ ~ ps-scale RC; clock set by ADC, not the circuit |
 | 4 | Transistor readout advantage in the subthreshold region | g_m = IC0/VT: mV voltage → mA current, more efficient than CMOS overdrive |
-| 5 | Tolerance statistical dividend: error ≈ tolerance × O(1), does not accumulate with W | 1 % @ W=4096 → only 1.32% (MC verified) |
+| 5 | Tolerance statistical dividend: error ≈ tolerance × O(1), does not accumulate with W | 1 % @ W=4096 → p95 only 1.31%, mean 0.54% (MC verified) |
 | 6 | Compatible with the mismatch-aware training route | 1606.07786: 1 % tolerance devices can approach INT8 |
 | 7 | Process dividend is direct: Moore's law improves the area tax | 27 B: 1080 cm² (45 nm) → 11 cm² (3 nm) |
 | 8 | Cost sweet spot + no HBM: advanced process lowest total cost | 7 nm ~$2.4k / 14 nm ~$3.2k / 45 nm ~$13k; no HBM (saves the H100's 8×HBM3 ~$5–8k) |
@@ -410,7 +416,7 @@ The most reasonable positioning of this scheme is: **an analog in-memory-computi
 
 1. Bowen, M. et al. "Analog, In-memory Compute Architectures for AI." arXiv:2302.06417 (2023). — Energy-limit theory; "transistor + reconfigurable resistor" original text; Table 4 energy data. [`refs/full_2302.06417.txt`]
 2. "Precise neural network computation with imprecise analog devices." arXiv:1606.07786 (2016). — Mismatch-aware training route. [`refs/full_1606.07786.txt`]
-3. Shafiee, A. et al. "ISAAC: A reconfigurable in-memory accelerator for deep neural network." HPCA 2016 / NorthPole, ISSCC 2016. — 256×256 ReRAM analog accelerator engineering precedent.
+3. Shafiee, A. et al. "ISAAC: A Convolutional Neural Network Accelerator with In-Situ Analog Arithmetic in Crossbars." ISCA 2016. — ReRAM crossbar analog in-memory accelerator precedent. (Erratum: NorthPole is IBM's 2019+ near-memory **digital** inference line — a different work; see ref. 9.)
 4. Demler, J. "Mythic multiplies in a flash." IEEE Spectrum, 2018. — Flash crossbar commercial analog computing (Mythic).
 5. ANNA: "A neural network chip" (1989), 16000 synapses, resistors as weights, bipolar (BJT) process — direct precursor of the user's scheme (IEEE IEDM/JSSC, not on arXiv; cited here from public historical record).
 6. Xia, Q. & Yang, J. "ReRAM-based analog resistive matrix multiplication for artificial neural network computing." — Memristive crossbars and the "device can only store positive numbers" sign problem.
@@ -426,10 +432,11 @@ The most reasonable positioning of this scheme is: **an analog in-memory-computi
 | sim/sim_v1.py | Ideal gain formula (counter-example) | Proves I_C = (β/R0)Σwx is wrong |
 | sim/sim_v1b.py | Full Ebers–Moll + bias bug | Nonlinearity 13.6 → 74.6× bend |
 | sim/sim_v4.py | Physically self-consistent corrected version | INT8 operating point R_E/IC0 |
-| sim/sim_v5.py | Differential virtual ground (voltage-mode counter-example) | DC back-feed 2.56 mA |
-| sim/sim_v5b.py | Current-mode virtual ground (final topology) | C1 identity, C5 tolerance 1.32% @ 1% |
+| sim/sim_v5.py | Differential virtual ground (voltage-mode counter-example) | Naive back-feed 1.10 mA → residual −0.02 mA |
+| sim/sim_v5b.py | Current-mode virtual ground (final topology) | C1 identity, C5 p95 1.31% @ ±1% / 0.13% @ ±0.1% |
 | sim/sim_v6_designspace.py | Full design-space sweep | Area-tax table, power, throughput window |
-| sim/sim_v7_e2e.py | 6-layer MLP end-to-end | Per-layer 0.9997 → final 0.79 |
+| sim/sim_v7_e2e.py | 6-layer MLP end-to-end | Per-layer 0.9997 → final 0.889 (seed-42 single net) |
+| sim/sim_v16_depth_multiseed.py | Multi-seed depth calibration (authoritative) | Final 0.829 ± 0.024 (10 nets); 1MOPS recovery 0.928 |
 | sim/sim_v8_errdecomp.py | Error decomposition | ADC not the bottleneck; noise is |
 | sim/sim_v9_snr.py | Analytic SNR (with self-correction) | Scaling law first version |
 | sim/sim_v10_snr_mc.py | Rigorous Monte-Carlo SNR (authoritative) | W-independent, R0^−½, BW^−½ |

@@ -49,6 +49,8 @@ i_tot=np.sqrt(i_n_res**2+i_n_shot**2)
 snr=(i_sig_A/i_tot)**2
 print(f"  Req(总)={Req:.1f}Ω  热噪声电流={i_n_res*1e9:.1f}nA  散粒={i_n_shot*1e9:.1f}nA")
 print(f"  信号(满幅)={i_sig_A*1e9:.0f}nA  SNR={10*np.log10(snr):.1f}dB → ENOB≈{20*np.log10(np.sqrt(snr)):.1f}bit")
+print("  ⚠ 注意: 此为满幅相干上界(x 全为正、信号同相直接相加)；随机输入权威值见 v10 MC")
+print("     (10MOPS→44.5dB≈7.1bit, 1MOPS→53.3dB≈8.6bit, R0=1MΩ)")
 # 不同输入幅度
 print("  幅度扫描 SNR:")
 for a in [0.1,0.3,0.5,1.0]:
@@ -80,17 +82,18 @@ for T_step in [100e-9,200e-9,500e-9]:
     e=P_tile*T_step/MACs
     print(f"  T={T_step*1e9:4.0f}ns: {thr/1e12:8.1f} TMAC/s  P_tile={P_tile:7.2f}W  {e*1e12:6.2f} fJ/MAC")
 
-# 精度: 电阻容差 1% 在电流模下的影响
+# 精度: 电阻容差在电流模下的影响（R15: 参数化容差扫描, 1% 与 0.1% 均为脚本实测）
 print("="*78)
-print("C5. 电阻容差 1% Monte Carlo (电流模, W=4096)")
+print("C5. 电阻容差 Monte Carlo (电流模, W=4096, 300 样本, 每支路 R 均匀扰动 ±tol)")
 ideal=np.sum(w*x)
-errs=[]
-for _ in range(300):
-    Rp_m=Rp*(1+rng.uniform(-0.01,0.01,len(Rp)))
-    Rn_m=Rn*(1+rng.uniform(-0.01,0.01,len(Rn)))
-    Io=(imac(x,w_pos,Rp_m)-imac(x,w_neg,Rn_m))*R0
-    errs.append(abs(Io-ideal)/abs(ideal))
-errs=np.array(errs)
-print(f"  mean={errs.mean()*100:.3f}% p95={np.percentile(errs,95)*100:.3f}% max={errs.max()*100:.3f}%")
-print(f"  → 1% 电阻 → 输出误差 p95 {np.percentile(errs,95)*100:.2f}% < INT8 量化噪声(0.4%)? "
-      f"{'是' if np.percentile(errs,95)*100<0.4 else '否'}")
+for tol in [0.01,0.001]:
+    errs=[]
+    for _ in range(300):
+        Rp_m=Rp*(1+rng.uniform(-tol,tol,len(Rp)))
+        Rn_m=Rn*(1+rng.uniform(-tol,tol,len(Rn)))
+        Io=(imac(x,w_pos,Rp_m)-imac(x,w_neg,Rn_m))*R0
+        errs.append(abs(Io-ideal)/abs(ideal))
+    errs=np.array(errs)
+    print(f"  tol=±{tol*100:.1f}%  mean={errs.mean()*100:.3f}% p95={np.percentile(errs,95)*100:.3f}% max={errs.max()*100:.3f}%")
+    print(f"  → 输出误差 p95 {np.percentile(errs,95)*100:.2f}% vs INT8 量化噪声(0.4%): "
+          f"{'达标' if np.percentile(errs,95)*100<0.4 else '不达标'}")

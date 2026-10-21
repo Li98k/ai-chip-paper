@@ -28,17 +28,17 @@ rng=np.random.default_rng(11)
 W=4096
 w=np.clip(rng.normal(0.0,1.0,W),-4.0,4.0)      # 含正负
 w_pos=np.clip(w,0,None); w_neg=np.clip(-w,0,None)
-Rw_pos=R0/w_pos.replace(0,np.inf)
-Rw_neg=R0/w_neg.replace(0,np.inf)
-G_p=np.sum(1.0/Rw_pos); G_n=np.sum(1.0/Rw_neg)
+# 直接以电导计算: G_j = w_j/R0 (w=0 → G=0, 天然无除零; 原式 R0/w 在 w=0 处除零)
+GP=w_pos/R0; GN=w_neg/R0
+G_p=np.sum(GP); G_n=np.sum(GN)
 
 print("T1. 差分虚拟地：共模抵消量化 (W=4096, R0=1MΩ, x~U(0,100mV))")
 V_GND=0.6   # 虚拟地电位(=差分对尾部晶体管 V_BE)
 x=rng.uniform(0,100e-3,W)
 def Iplus_minus(x, vg=V_GND, mismatch=0.0):
     """上/下网络注入电流；mismatch 模拟配平误差(G_+ 相对 G_- 的失配)"""
-    Ip=np.sum((x-vg)/(R0/w_pos.replace(0,np.inf)))
-    In=np.sum((x-vg)/(R0/w_neg.replace(0,np.inf)))*(1+mismatch)
+    Ip=np.sum((x-vg)*GP)
+    In=np.sum((x-vg)*GN)*(1+mismatch)
     return Ip,In
 Ip,In=Iplus_minus(x)
 Iout=Ip-In

@@ -38,7 +38,11 @@ for IC0 in [10e-6, 50e-6, 100e-6]:
     P = N_nodes*3*VCC*IC0*1.15   # 模拟偏置 + 15% 数字岛
     Ptot[IC0] = P
     print(f"  IC0={IC0*1e6:5.0f}µA → 模拟 {N_nodes*3*VCC*IC0:7.1f} W ×1.15 = {P:7.1f} W")
-print("  ADC/DAC: 每读出节点 136nJ/token, 总 <1% → 可忽略")
+# R15 修正单位: ADC 能量为 pJ 级(7nm 8bit SAR 5~20fJ/conv, 留大裕量取 136pJ/节点/
+# 次采样)。之前写 136nJ 是单位错(×1000): nJ 口径下 INT8@340tok/s 时 ADC 总功率
+# 将虚高至 ~300W(30%), 与"可忽略"矛盾。pJ 口径: INT8 角点 ~0.3W(<0.1%);
+# INT4 高吞吐角点(87k tok/s) ADC 线性上升, 仍 <10%。
+print("  ADC/DAC: 每读出节点 ~136pJ/token(pJ 级 SAR, 大裕量); INT8 角点 <0.1%, INT4 高吞吐角点数 %(R15 单位修正)")
 
 # ════════ D. 吞吐 & 能效（锚定 v6 已验证设计窗口工作点）════════
 # (标签, R0, f_sample[Hz], SNR_median[dB], ≈bit) —— 全部取自 v6/v10 验证窗口
@@ -62,9 +66,10 @@ for tag, R0, f, snr, bit in OPS:
           f"IC0=50µA:{E50:8.1f} mJ/tok | IC0=10µA:{E10:7.1f} mJ/tok | IC0=100µA:{E100:7.1f} mJ/tok")
 
 # ════════ E. 能效对比（vs H100, 7nm 基准）════════
-print("\n════ 能效对比（7nm, Qwen3.8-27B）════")
-# 织体峰值（固定权重, 不可重编程, 仅量级参考）
-TOPS_peak = 2*MAC_tok*740e6*N_nodes/MAC_per_node/1e12  # 峰值 MAC/s→TOPS
+# R15 修正: 织体峰值 OPS = 节点数 × 每节点峰值 MAC/s × 2(MAC→OPS), 之前误乘
+# MAC_tok/MAC_per_node 导致 N_nodes 平方(虚高 ~7.7e6 倍)
+TOPS_peak = 2*740e6*N_nodes/1e12
+print(f"\n════ 能效对比（7nm, Qwen3.8-27B）════")
 print(f"  织体峰值(MAC, INT4 740MOPS): {TOPS_peak:.3e} TOPS / {Ptot[50e-6]/1e3:.2f}kW "
       f"= {TOPS_peak*1e12/Ptot[50e-6]/1e12:.1f} TOPS/W（固定权重专用）")
 print(f"  对照 H100: 989 TFLOPS / 0.7kW = 1.4 TFLOPS/W（可重编程, FP16）")

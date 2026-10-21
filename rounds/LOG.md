@@ -16,3 +16,12 @@ R11: 发热 sim_v13 (风冷热阻 H100 校准, SNR∝1/√T 符号, TSV pitch 20
 R12: 控制模态 sim_v14 (BJT 电流 vs MOS 电压, 两模态均可行, 差分消解, BJT 调 R_E≥280Ω→-1dB / MOS TIA→0dB) + 写入 paper §4.4–4.7 + 摘要/§6.1
 R13: 最优读出前端图 8 fig_readout_diff (差分电流模+电荷采样, CHECK 0 重叠) 写入 §4.7 + 附录; 全篇总结
 R14: 工艺+成本 sim_v15 (28/14nm 外推 + Poisson 良率 + MCM 封装; 成熟节点不便宜, 甜点 7nm~$2.4k) + 修正能效单位(H100 实为 J/token, 之前误 mJ 错 1000×) + 吞吐(tok/s) + 改标题 + 新 §4.5 工艺成本
+R15: 复跑审计+修复 (2026-10-21):
+  - sim_v5.py 崩溃修复 (w 为 ndarray 非 Series, R0/0 inf 链; 改电导域直算 G=w/R0)
+  - 图字体修复 (mpl 字体缓存未注册 Noto CJK; 清缓存+font list 加 JP/Droid 兜底, 16 图重出, 视觉复检 0 豆腐块)
+  - sim_v5b C5 补 0.1% 容差扫描: 实测 mean/p95 = 0.54/1.31%@±1%, 0.05/0.13%@±0.1% (论文旧值 1.32% 实为 p95)
+  - sim_v12 修复: TOPS 误乘致 N_nodes²虚高 7.7e6× (6.4e10→9.8e3 TOPS); ADC 136nJ→136pJ 单位错 (INT8 ADC<0.1% 才与"可忽略"自洽)
+  - 新增 sim_v16_depth_multiseed.py: v7(0.889)/v8(0.791) 矛盾定论=单网络实现差异非模型差异;
+    10 网络×20 MC 权威值: 0.829±0.024 @BW1.6M(≈3.2MOPS), 1MOPS 恢复 mean 0.928 (跨种子稳定)
+  - 文档同步 12+ 处 (paper/paper_en/README): 2.56mA→1.10/−0.02mA, 1.32%→mean0.54/p95 1.31, 0.79→0.829±0.024,
+    ISAAC(ISCA 2016)/NorthPole(IBM 2019+ 数字) 拆分勘误, 158TOPS/W 无出处删除, 附录补 v16

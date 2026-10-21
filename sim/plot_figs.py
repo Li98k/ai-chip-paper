@@ -4,7 +4,8 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib import rcParams
-rcParams["font.family"]="DejaVu Sans"
+rcParams["font.family"]="sans-serif"
+rcParams["font.sans-serif"]=["Noto Sans CJK SC","Noto Sans CJK JP","Droid Sans Fallback","WenQuanYi Zen Hei","SimHei","DejaVu Sans"]
 rcParams["axes.unicode_minus"]=False
 OUT="/home/chiva/AI_video/AI_chip_paper/sim/figs"
 import os; os.makedirs(OUT, exist_ok=True)
@@ -93,23 +94,23 @@ print("fig1 done")
 # ── 图2: 电流模虚拟地架构 —— 线性求和 + 噪声 ──
 w2=np.clip(rng.normal(0,1.0,W),-4,4)
 wp=np.clip(w2,0,None); wn=np.clip(-w2,0,None)
-Rp=R0/wp; Rn=R0/wn
-Gp=np.sum(1.0/Rp); Gn=np.sum(1.0/Rn)
-def imac(x,R): return np.sum(x/R)
+Gp_arr=wp/R0; Gn_arr=wn/R0           # 逐支路电导(避免 R0/0 除零; 语义与原 R0/w 完全一致)
+Gp=np.sum(Gp_arr); Gn=np.sum(Gn_arr)
+def imac(x,G): return np.sum(x*G)
 x=rng.uniform(0,1.0,W)
 a_scan=np.linspace(0.02,1,40)
 sig=[];snr=[]
 Req=1/(Gp+Gn); BW=1.6e6
 vn=np.sqrt(4*kB*T*Req*BW)
 for a in a_scan:
-    ip=imac(a*x,Rp); ino=imac(a*x,Rn)
+    ip=imac(a*x,Gp_arr); ino=imac(a*x,Gn_arr)
     ia=abs(ip-ino)
     ish=np.sqrt(2*q*ia*BW)
     it=np.sqrt((vn*(Gp+Gn))**2+ish**2)
     sig.append(ia); snr.append(20*np.log10(ia/it))
 fig,ax=plt.subplots(1,2,figsize=(11,4.2))
 ax[0].plot(a_scan,np.array(sig)*1e9,"-",lw=2,color="tab:blue")
-ax[0].plot([0,1],[0,abs(imac(x,Rp)-imac(x,Rn))*1e9],"--",c="gray",lw=1,
+ax[0].plot([0,1],[0,abs(imac(x,Gp_arr)-imac(x,Gn_arr))*1e9],"--",c="gray",lw=1,
            label="ideal slope = (I_p-I_n)")
 ax[0].set_xlabel("input scale a (x = a·x_ref)"); ax[0].set_ylabel("|I_out| (nA)")
 ax[0].set_title("Current-mode virtual-ground summation\n(linear, no DC backflow)")
