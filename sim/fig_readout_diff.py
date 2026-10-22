@@ -78,7 +78,7 @@ gnd(CX,CY-0.82,s=0.12)
 ax.text(CX+0.30,CY-0.42,"C",fontsize=11,ha="left",va="center",fontweight="bold")
 ax.text(CX+0.12,CY+0.34,"I_out 流入 τ → 充电",fontsize=8.2,ha="left",color="#0a5",fontweight="bold")
 ax.text(CX+0.12,CY-1.25,"V_out = I_out·τ/C  [V]",fontsize=8.8,ha="left",color="#0a5",fontweight="bold")
-ax.text(CX+0.12,CY-1.56,"无 R_f 热噪声, 噪声 kT/C≈0.02µV",fontsize=7.6,ha="left",color="#555")
+ax.text(CX+0.12,CY-1.56,"无 R_f 热噪声, 噪声 √(kT/C)≈20µV@10pF",fontsize=7.6,ha="left",color="#555")
 
 # ══ 最右：ADC → 下一层 ══
 NX2,NY2,NW2,NH2=13.3,5.55,1.9,1.2

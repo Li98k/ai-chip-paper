@@ -98,7 +98,7 @@ Cascading the 2.2 single-stage unit into a full network yields a "weights-as-res
 - BJT readout (R_E linearization): I_j → y_j = I_j·R0, giving the two L2 node voltages.
 - Stage-2 wiring L2→L3: node 1 connects R=1667 kΩ←y1, R=2500 kΩ←(−y2); node 2 connects R=1111 kΩ←y1, R=5000 kΩ←y2. Ohmic summation + BJT readout → z1, z2.
 
-**Numerical verification (sim_v11, x = [50,30,20] mV):**
+**Numerical verification (sim_v11, x = [80,40,60] mV):**
     analog three-layer wiring  z = [33.6, 60.0] mV
     digital matrix multiply    z_dig = W2·(W1·x) = [33.6, 60.0] mV
     max relative error = 1.16e-16 (pure float, algebraic identity)
@@ -303,7 +303,7 @@ Key points:
 
 **Better scheme C: current-mode differential readout** (negative weights already force a differential pair, so three birds with one stone) — the signal stays current-mode throughout (resolving the MOS modality mismatch); common-mode rejection ~40 dB (cancels R0 common-mode drift / temperature / process offset, stronger than single-ended); the gain device can be BJT (45 nm, low 1/f) or MOS (7/3 nm, pure CMOS), node-independent.
 
-**Better scheme D: charge sampling (current-mode S/H, zero impedance conversion)** — the virtual-ground current I_sig flows into a sampling capacitor C for time τ → V = I_sig·τ/C, a natural transimpedance with no R_f thermal noise, noise kT/C ≈ 0.02 µV; combined with differential = the optimal front-end.
+**Better scheme D: charge sampling (current-mode S/H, zero impedance conversion)** — the virtual-ground current I_sig flows into a sampling capacitor C for time τ → V = I_sig·τ/C, a natural transimpedance with no R_f thermal noise; sampling noise √(kT/C) ≈ 20.4 µV at C = 10 pF (R16-T6 erratum: the original "0.02 µV" mislabeled an mV value as µV); combined with differential = the optimal front-end.
 
 **Verdict (including feasibility): the scheme works for both control modalities, and the control-modality mismatch can be resolved architecturally.**
   · 45 nm prototype: BJT current-mode differential readout (lowest 1/f, intrinsic match, available).
@@ -311,7 +311,7 @@ Key points:
   · Optimal front-end: current-mode + differential + (optional charge sampling) → the control-modality problem is no longer a feasibility barrier.
   · Bonus: the attention-layer softmax exp can be natively realized with a diode / Schottky (I ∝ e^{V/VT}).
 
-Figure 8 (optimal readout front-end: current-mode differential + charge sampling): `sim/figs/fig_readout_diff.png` (script `sim/fig_readout_diff.py`). It turns schemes C/D into a complete front-end: ① the crossbar virtual-ground node outputs positive/negative branch currents I± → ② differential current buffer (current mirror) I_out = I+ − I−, CMR ≈ 40 dB cancels R0 common-mode drift / temperature / process offset → ③ charge-sampling C, I_out flows in for time τ, charging to V_out = I_out·τ/C (no R_f thermal noise, noise kT/C ≈ 0.02 µV) → ④ ADC to the next layer. Entirely current-mode, no impedance conversion; the gain device is BJT (45 nm) / MOS (7/3 nm) chosen per node, architecturally resolving the "current-control vs voltage-control" modality mismatch.
+Figure 8 (optimal readout front-end: current-mode differential + charge sampling): `sim/figs/fig_readout_diff.png` (script `sim/fig_readout_diff.py`). It turns schemes C/D into a complete front-end: ① the crossbar virtual-ground node outputs positive/negative branch currents I± → ② differential current buffer (current mirror) I_out = I+ − I−, CMR ≈ 40 dB cancels R0 common-mode drift / temperature / process offset → ③ charge-sampling C, I_out flows in for time τ, charging to V_out = I_out·τ/C (no R_f thermal noise, sampling noise √(kT/C) ≈ 20.4 µV @ 10 pF) → ④ ADC to the next layer. Entirely current-mode, no impedance conversion; the gain device is BJT (45 nm) / MOS (7/3 nm) chosen per node, architecturally resolving the "current-control vs voltage-control" modality mismatch.
 
 ---
 
@@ -406,7 +406,7 @@ The user's "transistor amplification + weights-as-resistors" AI chip idea, after
 - **Scale:** area tax 1 parameter = 1 cell, 27 B @ 45 nm ≈ 1080 cm² (≈126 reticle), @ 3 nm ≈ 11 cm² (1.3 reticle) single-package feasible;
 - **Energy & throughput:** Qwen3.8-27B single-context INT4 ~87,000 tok/s, INT8 ~1,200 tok/s, energy ~50–300× lower than H100 batched (fixed-weight e_op ∝ 1/N, analog summation saves 3–6× over digital MAC);
 - **Process & cost:** mature 28/14 nm are **not cheaper** due to the many MCM dies; cost sweet spot 7–14 nm (7 nm ~$2.4k, 14 nm ~$3.2k, 45 nm ~$13k); no HBM/external memory, saving the H100's 8×HBM3 (~$5–8k);
-- **Precedent:** the ANNA (1989) → NorthPole (2016) → Mythic (2018) → Bowen (2023) complete lineage supports it; the Bowen original text corresponds word-for-word to the user's idea.
+- **Precedent:** the ANNA (1989) → ISAAC (2016) → Mythic (2018) → Bowen (2023) complete lineage supports it (IBM NorthPole 2019+ is near-memory **digital** inference, cited separately as modern system corroboration); the Bowen original text corresponds word-for-word to the user's idea.
 
 The most reasonable positioning of this scheme is: **an analog in-memory-computing chip for fixed-weight LLM inference, with "tokens per joule" as the core metric, target process ≤7 nm, precision INT4~INT8, complementary to — not a replacement for — GPUs.** The three contribution points the paper can claim (SNR design window, area-tax process boundary, end-to-end depth accumulation) are all backed by re-runnable simulations and figures.
 
