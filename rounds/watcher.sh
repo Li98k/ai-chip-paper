@@ -13,12 +13,15 @@ while :; do
   # 队列全部完成且已过滚动期？继续滚动优化（不设终止）
   ts=$(date -u +%Y%m%d_%H%M%S)
   echo "[watcher] launch round $ts $(date -u +%FT%TZ)" >> $LOG
-  timeout 2400 hermes chat --oneshot -Q --yolo --in /home/chiva/AI_video/AI_chip_paper \
+  timeout 2400 hermes chat --oneshot -Q --yolo --create-if-missing \
+    --in /home/chiva/AI_video/AI_chip_paper \
     --continue "R16W-$ts" \
     -q "R16W 自动轮次。阅读 rounds/THREAD_PROMPT.md(铁律与原理主线) 和 rounds/QUEUE.md，领取第一个未勾选 [ ] 任务并完整做完它：产出物落盘、勾选该任务、在 QUEUE.md 末尾追加领取记录、git add -A && git commit -m 'R16-Tn: <一句总结>'。若队列已全部完成则按 QUEUE.md 尾部滚动优化规则做一轮精修。只做一个任务，做完即收尾退出，不要开新任务。" \
     >> "rounds/round_$ts.log" 2>&1
   rc=$?
   echo "[watcher] round $ts exit=$rc $(date -u +%FT%TZ)" >> $LOG
+  if [ "$rc" -ne 0 ]; then fails=$((fails+1)); else fails=0; fi
+  if [ "$fails" -ge 5 ]; then echo "[watcher] 5x consecutive failures, cooling 15min" >> $LOG; sleep 900; fails=0; fi
   sleep 30
 done
 echo "[watcher] exit $(date -u +%FT%TZ)" >> $LOG
