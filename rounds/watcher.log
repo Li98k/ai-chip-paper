@@ -31,3 +31,8 @@
 [watcher] launch round 20261022_102234 2026-10-22T10:22:34Z
 [watcher] round 20261022_102234 exit=0 2026-10-22T10:50:54Z
 [watcher] launch round 20261022_105124 2026-10-22T10:51:24Z
+[watcher] round 20261022_105124 exit=0 2026-10-22T10:59:12Z
+[watcher] launch round 20261022_105942 2026-10-22T10:59:42Z
+[watcher] round 20261022_105942 exit=124 2026-10-22T11:39:44Z
+[watcher] deadline reached 2026-10-22T11:40:14Z
+[watcher] exit 2026-10-22T11:40:14Z
