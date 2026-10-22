@@ -20,6 +20,9 @@
 
 若队列全部完成：执行滚动优化——复跑 consistency_check.py --full、挑 paper.md 任一章节做"去水分/补出处"精修一轮、commit。
 
+- [x] 滚动优化 R17 (2026-10-22): consistency_check --full 复跑 CLEAN + §5.1 文献定位出处归属精修
+      (核对 Bowen 2302.06417 参考列表, 明确"原文引用" vs "项目补充谱系" 边界, 中英同步) + LOG.md 记 R17 + commit。
+
 ## 领取记录
 
 - 2026-10-22 06:05 UTC | T1 | 新建 rounds/可行性与转换原理.md 第 1 章（电压→电流域转换原理）：复跑 sim_v1/v1b/v4/v5/v5b，虚地精确性 0.00000000%、朴素指数失真 5.5×、倒灌 1.10mA/节点、β^L 爆炸全部实测入文；consistency_check CLEAN。

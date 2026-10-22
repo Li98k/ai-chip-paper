@@ -466,8 +466,9 @@ Bowen et al., "Analog, In-Memory Compute Architectures for AI"
 >  conductance of which determines the effective weight of each
 >  element in the matrix."
 
-这与用户设想（三极管 + 可调电阻 + 电导=权重）逐字对应。该文献引用的
-标志性工作（本领域完整谱系）：
+这与用户设想（三极管 + 可调电阻 + 电导=权重）逐字对应。下表为本领域技术谱系；
+其中 Bowen 2302.06417 原文实际引用的仅 ISAAC(2016)/Mythic(2018)/Xia&Yang(2019)
+三行（已核对其参考列表），其余为项目补充的谱系定位，非 Bowen 原文引用：
 
 | 时间 | 工作 | 要点 | 与用户方案的关系 |
 |------|------|------|------------------|

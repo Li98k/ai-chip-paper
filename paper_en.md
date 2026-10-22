@@ -323,7 +323,7 @@ Bowen et al., "Analog, In-Memory Compute Architectures for AI" (arXiv 2302.06417
 
 > "Each transistor is connected to a reconfigurable resistor, the conductance of which determines the effective weight of each element in the matrix."
 
-This corresponds word-for-word to the user's idea (transistor + tunable resistor + conductance = weight). The landmark works cited by this reference (the complete lineage of the field):
+This corresponds word-for-word to the user's idea (transistor + tunable resistor + conductance = weight). The table below maps the field's technical lineage; of these, Bowen 2302.06417's own reference list actually cites only the ISAAC (2016) / Mythic (2018) / Xia & Yang (2019) rows (verified against its retrieved references) — the rest are the project's own lineage mapping, not Bowen citations:
 
 | Time | Work | Key point | Relation to the user's scheme |
 |------|------|------|------------------|

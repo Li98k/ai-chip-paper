@@ -44,3 +44,14 @@ R16: 可行性与转换原理专章 + 红队 + 补实验 (2026-10-22, 5h 自动�
     仿真计数19→24(README/paper头部/paper_en头部); 修复 v22 B节单位笔误; README 加专章/红队链接
   - 线程机制: rounds/watcher.sh 看门狗(串行派工/断点自恢复/失败熔断) + rounds/consistency_check.py
     门禁(--full 扫禁用旧数字+复跑5权威脚本) + QUEUE.md 任务队列; 实际运行 05:53→11:40 UTC = 5h47m
+R17: 滚动优化轮 (队列10/10 完成后收尾, 2026-10-22):
+  - 门禁: consistency_check.py --full 复跑 → VERDICT CLEAN (禁数字扫描 + v11恒等1.16e-16
+    + 全量复跑 v5b/v10/v16/v12, 锚点 0.8291 对齐)
+  - §5 文献定位精修(去水分/补出处, 中英同步 paper.md/paper_en.md §5.1): 核对了 Bowen
+    2302.06417 已抓全文的参考列表, 原文实际仅引用谱系表中的 ISAAC(2016)/Mythic(2018)/
+    Xia&Yang(2019) 三行; ANNA(1989)/1990s模拟VLSI/Hopfield/NorthPole/1606.07786 均不在其
+    参考列表(grep 各 0 命中)。修正 §5.1 表前导语, 不再笼统称"该文献引用的标志性工作",
+    改为明确区分"项目补充的谱系定位" vs "Bowen 原文引用", 消除出处归属歧义(审稿人可核查)。
+  - 注: ANNA 1989 具体规格(16000突触/双极)项目一手未抓到(见 R2/R6), 已在参考文献标注
+    "cited from public historical record"; 本表仅修正归属, 不新增未核实数字。
+  - 未动仿真口径与任何数值锚点; consistency_check --full 复跑 CLEAN。
