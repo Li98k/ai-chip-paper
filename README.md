@@ -12,10 +12,12 @@
 
 - 📄 中文论文：[`paper.md`](paper.md)（640 行，7 章 5 问题）
 - 📄 英文论文：[`paper_en.md`](paper_en.md)（全篇翻译）
-- 🔬 19 个可复跑仿真：[`sim/`](sim/)
+- 🔬 24 个可复跑仿真：[`sim/`](sim/)
 - 📊 8 张图（全部由脚本生成、可复现）：[`sim/figs/`](sim/figs/)
 - 📚 参考文献全文/摘要：[`refs/`](refs/)
 - 📋 审核轮次记录：[`rounds/LOG.md`](rounds/LOG.md)
+- 📕 R16 可行性与转换原理专章（5 章 + 收尾摘要）：[`rounds/可行性与转换原理.md`](rounds/可行性与转换原理.md)
+- 🛡️ R16 审稿人红队（10 致命质疑 + E1–E5 补实验）：[`rounds/redteam.md`](rounds/redteam.md)
 
 ## 核心问题
 
@@ -68,8 +70,9 @@ python sim_v15_process_cost.py # 工艺成本
 python fig_readout_diff.py    # 图 8（带 0 重叠自检）
 ```
 
-`rounds/LOG.md` 记录了 R0–R14 每一轮审核改了什么、推翻了自己哪些错误结论
-（含多次自我纠错：SNR 90dB 上界误报 → 严格 MC 49.9dB；H100 能效单位错 1000× 的修正等）。
+`rounds/LOG.md` 记录了 R0–R16 每一轮审核改了什么、推翻了自己哪些错误结论
+（含多次自我纠错：SNR 90dB 上界误报 → 严格 MC 49.9dB；H100 能效单位错 1000× 的修正；
+R16 v7/v8 单点矛盾 → 多种子分布 0.829±0.024 等）。
 
 ## 目录结构
 
@@ -79,13 +82,15 @@ AI_chip_paper/
 ├── paper_en.md           # 英文论文（全篇翻译）
 ├── requirements.txt
 ├── LICENSE               # MIT
-├── sim/                  # 19 个仿真脚本 + 8 张图的生成脚本
-│   ├── sim_v1.py … sim_v17_joint_noise.py
+├── sim/                  # 24 个仿真脚本 + 8 张图的生成脚本
+│   ├── sim_v1.py … sim_v22_kv_energy.py
 │   ├── fig3layer_wiring.py / fig_circuit_flow.py / fig_readout_diff.py
 │   ├── plot_figs.py
 │   └── figs/             # fig1–fig8 (PNG+PDF)
 ├── refs/                 # 文献全文/摘要 (Bowen 2302.06417, 1606.07786 等)
-└── rounds/LOG.md         # R0–R14 审核轮次记录
+├── rounds/LOG.md         # R0–R16 审核轮次记录
+├── rounds/可行性与转换原理.md  # R16 专章（5 章 + 收尾摘要）
+└── rounds/redteam.md     # R16 审稿人红队（10 质疑 + E1–E5 补实验）
 ```
 
 ## 许可证

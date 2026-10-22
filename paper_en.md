@@ -2,7 +2,7 @@
 
 **Circuit-level feasibility, energy efficiency, and cost analysis of an LLM inference chip built from transistor amplifier circuits**
 
-*An iterative, re-audited feasibility study (review rounds R0–R16, ≥5 h of genuine re-review). All 19 simulations in `sim/` are re-runnable; all figures in `sim/figs/` are reproducible from the listed scripts. No numbers are fabricated — every claim traces to a simulation run or a retrieved reference in `refs/`.*
+*An iterative, re-audited feasibility study (review rounds R0–R16, ≥5 h of genuine re-review). All 24 simulations in `sim/` are re-runnable; all figures in `sim/figs/` are reproducible from the listed scripts. No numbers are fabricated — every claim traces to a simulation run or a retrieved reference in `refs/`.*
 
 ---
 
@@ -384,12 +384,17 @@ Under these conditions, an "LLM linear-layer inference chip with parameters writ
 | 2b | MCM packaging cost rises linearly with die count (mature nodes not cheap) | Medium | Pick the 7–14 nm sweet spot (the 12–49-die 28/14 nm is actually more expensive; §4.5) |
 | 3 | Accuracy-throughput tradeoff: 100 MOPS only 5.2 bit | High | Drop throughput / larger R0 / multi-token averaging; positioned as "tokens per joule," not "peak TOPS" |
 | 4 | Non-linear ops need digital islands | Medium | softmax/LN implemented digitally, hybrid-architecture evaluation |
-| 5 | Weight write / reprogramming cost | Medium | Pure-inference scenario no reconfiguration (scheme premise); RRAM programming energy is high |
-| 6 | Device drift / fatigue (RRAM route) | Medium | Periodic recalibration; polysilicon-resistor alternative (stable but larger area) |
+| 5 | Weight write / reprogramming cost (**L1**: "model frozen ≥1 year" is a scheme premise) | Medium | No reconfiguration in pure-inference use; quantified (v22): 1e4-pulse full-chip program = 16 s row-parallel / 18.3 h node-serial, write energy 0.0022 kWh negligible → model-switch wall-clock acceptable but not "instant"; product positioning must state "model frozen" explicitly |
+| 6 | Device drift / fatigue (RRAM route, **D1**) | Low–Medium (narrowed by v18) | Periodic recalibration + polysilicon-resistor alternative; quantified (v18, κ from literature range, no measurement): independent-mismatch channel 5-year κ=0.3 end-of-life only 0.8288 (−0.4%), 0.1% process corner stable over 5 years → drift is **not** a killer; residual risk = measured long-term drift rate & write endurance |
 | 7 | On-chip training limited | Medium | Analog programming/training lines are emerging (arXiv 2305.16647 gradient-descent programming of analog cores, etc.); can follow |
-| 8 | ADC/DAC area and power (per node) | Medium | Amortized by large N (e_op ∝ 1/N); time-multiplexed ADC |
+| 8 | ADC/DAC area and power (per node; **L2**: 7 nm ADC area/energy not included in this accounting) | Medium | Amortized by large N (e_op ∝ 1/N); time-multiplexed ADC; note: §4 energy figures are on the analog-core basis, ADC area/power is a separate engineering item |
 | 9 | Engineering ecosystem: EDA / design flow lacks an analog-CIM toolchain | Medium | Borrow SRAM-array EDA + custom analog IP |
 | 10 | Incompatible with the GPU software stack (CUDA/Triton) | Medium | Model-weight export + per-layer mapping compiler (similar to the MyPU/Cerebras route) |
+| 11 | No cell-level ECC (**E2 quantified**) | Low | stuck-open 1e-4 ≈ lossless (0.8294); 1% defect rate → 0.8096 still INT4; 5% → 0.7431 needs redundancy/binding → yield floor: ECC-free within 1% defect rate |
+| 12 | Calibration overhead (**E3 quantified**: 27 B cells) | Low | Calibration benefit is intrinsically small (thermal noise is the ceiling; v21: q≥4 bit calibration already at ceiling 0.8298 ≈ ideal 0.8295) → calibration is a one-time post-fab step, not a recurring cost, and needs low read precision (4–6 bit suffice) |
+| 13 | NRE amortization (**L3**) | High (small volume) | v22 amortization table: NRE $100 M → break-even at 42 k units ($2.4 k silicon basis); **the cost story only holds at ≥1 M units mass production**; small-batch per-unit cost far exceeds H100 |
+| 14 | Model lifecycle & anti-reverse-engineering (**L4**) | Medium | Weights frozen in silicon = model cannot be hot-updated (L1) and weakly protected against reverse engineering (partial weight extraction from the die, no encrypted execution) → positioned for "own-model private deployment," not open-model serving |
+| 15 | KV-cache reflow (**E5 quantified**) | Medium (long ctx × INT4) | v22: INT8 @ 4 k ctx KV reflow 2.52 TB/s bandwidth feasible, HBM-tier energy +68.7 mJ (39% of INT8 low edge); INT4 tier exceeds 4×H100 HBM bandwidth at any ctx > 1 k → **long-context × INT4 scenarios require KV sharding / GQA / quantization or multi-chip**, conflicting with the "HBM-free" selling point |
 
 ### 6.4 Applicability Boundary vs GPU
 
@@ -438,6 +443,11 @@ The most reasonable positioning of this scheme is: **an analog in-memory-computi
 | sim/sim_v7_e2e.py | 6-layer MLP end-to-end | Per-layer 0.9997 → final 0.889 (seed-42 single net) |
 | sim/sim_v16_depth_multiseed.py | Multi-seed depth calibration (authoritative) | Final 0.829 ± 0.024 (10 nets); 1MOPS recovery 0.928 |
 | sim/sim_v17_joint_noise.py | Joint temperature × 1/f × drift matrix (on v16 framework) | Near-additive (ratio 0.99–1.02); worst 0.7561 → 0.8365 at 1 MOPS; MOS 1-f largest single term −0.043 |
+| sim/sim_v18_drift_time.py | Drift timeline × recalibration period (E4, κ from literature range) | Independent mismatch 5-yr κ=0.3 only 0.8288 (−0.4%); 0.1% corner stable 0.8291 over 5 yr |
+| sim/sim_v19_coline_rc.py | Column-line distributed-resistance error (E1) | W=4096 worst 410 Ω only 0.046% p95 (|V|max 0.61 mV) → C1 virtual ground robust |
+| sim/sim_v20_defect_inject.py | Cell-defect injection (E2) | stuck-open 1e-4 ≈ lossless (0.8294), 1% → 0.8096, 5% → 0.7431; stuck-at-worst 1e-4 → 0.8276 |
+| sim/sim_v21_calib_loop.py | Spatially-correlated mismatch + calibration-residue closed loop (E3) | Calibration benefit minimal (thermal noise is the ceiling): q≥4 bit already at ceiling (0.8298 ≈ ideal 0.8295) |
+| sim/sim_v22_kv_energy.py | KV reflow / programming wall-clock / NRE amortization (E5, pure arithmetic + stated assumptions) | INT8@4k KV 2.52 TB/s feasible; INT4 tier KV needs sharding; 1e4-pulse program 16 s row-par / 18.3 h serial; NRE $100 M break-even 42 k units |
 | sim/sim_v8_errdecomp.py | Error decomposition | ADC not the bottleneck; noise is |
 | sim/sim_v9_snr.py | Analytic SNR (with self-correction) | Scaling law first version |
 | sim/sim_v10_snr_mc.py | Rigorous Monte-Carlo SNR (authoritative) | W-independent, R0^−½, BW^−½ |
