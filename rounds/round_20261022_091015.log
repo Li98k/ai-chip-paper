@@ -1,2 +1,19 @@
 Session 20261022_171016_d26c0e found but has no messages. Starting fresh.
   ⟳ compacting context…
+R16-T6 完成并提交（commit e3315d9）。本轮总结：
+
+任务：T6 全文数值锚点复审（三套文档逐一对照最新 sim 输出）
+
+做法与结果：
+1. 全量复跑 sim_v1..v16 共 18 个脚本 + consistency_check.py --full，逐一对照 paper.md / paper_en.md / README.md。
+2. 修复 3 项不一致：
+   - kT/C 单位勘误（T3 发现）：√(kT/C)@10pF = 20.4µV，原文误标 0.02µV。落盘 5 处 + 1 图：sim_v14 打印式（×1e3→×1e6）、fig_readout_diff.py 图注（已重生成 PNG）、paper.md §4.5 两处、paper_en.md 两处。量级结论不变（20µV ≪ 100mV 满幅）。
+   - §2.3 sim_v11 输入标注笔误：[50,30,20]mV → [80,40,60]mV（中英 2 处，以脚本实际输出为准；[50,30,20] 代入得 z=[25.4,41.3] 与输出 [33.6,60.0] 不符）。
+   - paper_en.md §6 先例行残留 "NorthPole(2016)" 混淆，改为 ISAAC(2016) + NorthPole 2019+ 另注，与 paper.md/README 已定稿口径对齐（该残留同文参考文献 3 的勘误自相矛盾）。
+3. 11 项关键锚点复核全部通过：0.00000000% 求和精确、0.543/1.314 容差、44.5dB@10MOPS、288kΩ INT8 窗口、1.16e-16 恒等、0.8291→0.9281 深度、1080cm²/3.1 reticle、$2.4k 成本甜点、液冷 Tj 31–49°C 等。
+4. 产出物：rounds/T6_锚点复审报告.md（修复清单 + 锚点对照表）；可行性与转换原理.md 两处"记入 T6 清单"改为"T6 已修"。
+5. 门禁：consistency_check.py --full VERDICT: CLEAN；QUEUE.md T6 已勾选并追加领取记录；git commit "R16-T6: ..." 完成。
+
+按规则本轮只做一个任务，收尾退出。
+
+session_id: 20261022_171016_d26c0e

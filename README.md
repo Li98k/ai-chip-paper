@@ -12,7 +12,7 @@
 
 - 📄 中文论文：[`paper.md`](paper.md)（640 行，7 章 5 问题）
 - 📄 英文论文：[`paper_en.md`](paper_en.md)（全篇翻译）
-- 🔬 14 个可复跑仿真：[`sim/`](sim/)
+- 🔬 19 个可复跑仿真：[`sim/`](sim/)
 - 📊 8 张图（全部由脚本生成、可复现）：[`sim/figs/`](sim/figs/)
 - 📚 参考文献全文/摘要：[`refs/`](refs/)
 - 📋 审核轮次记录：[`rounds/LOG.md`](rounds/LOG.md)
@@ -79,8 +79,8 @@ AI_chip_paper/
 ├── paper_en.md           # 英文论文（全篇翻译）
 ├── requirements.txt
 ├── LICENSE               # MIT
-├── sim/                  # 14 个仿真脚本 + 8 张图的生成脚本
-│   ├── sim_v1.py … sim_v15_process_cost.py
+├── sim/                  # 19 个仿真脚本 + 8 张图的生成脚本
+│   ├── sim_v1.py … sim_v17_joint_noise.py
 │   ├── fig3layer_wiring.py / fig_circuit_flow.py / fig_readout_diff.py
 │   ├── plot_figs.py
 │   └── figs/             # fig1–fig8 (PNG+PDF)

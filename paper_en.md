@@ -2,7 +2,7 @@
 
 **Circuit-level feasibility, energy efficiency, and cost analysis of an LLM inference chip built from transistor amplifier circuits**
 
-*An iterative, re-audited feasibility study (review rounds R0–R14, ≥5 h of genuine re-review). All 14 simulations in `sim/` are re-runnable; all figures in `sim/figs/` are reproducible from the listed scripts. No numbers are fabricated — every claim traces to a simulation run or a retrieved reference in `refs/`.*
+*An iterative, re-audited feasibility study (review rounds R0–R16, ≥5 h of genuine re-review). All 19 simulations in `sim/` are re-runnable; all figures in `sim/figs/` are reproducible from the listed scripts. No numbers are fabricated — every claim traces to a simulation run or a retrieved reference in `refs/`.*
 
 ---
 
@@ -400,7 +400,7 @@ Under these conditions, an "LLM linear-layer inference chip with parameters writ
 
 ## 7. Conclusion
 
-The user's "transistor amplification + weights-as-resistors" AI chip idea, after R0–R14 rounds of circuit-level argumentation and rigorous Monte-Carlo simulation, is judged **conditionally feasible**: its physical core (resistor network does the weighted sum, transistor does the readout amplification) holds, but it must be corrected from "inject voltages into the base" to "current-mode virtual-ground crossbar + BJT current-mirror/transconductance readout." The quantitative boundaries of the scheme are fully characterized:
+The user's "transistor amplification + weights-as-resistors" AI chip idea, after R0–R16 rounds of circuit-level argumentation and rigorous Monte-Carlo simulation, is judged **conditionally feasible**: its physical core (resistor network does the weighted sum, transistor does the readout amplification) holds, but it must be corrected from "inject voltages into the base" to "current-mode virtual-ground crossbar + BJT current-mirror/transconductance readout." The quantitative boundaries of the scheme are fully characterized:
 
 - **Accuracy:** SNR independent of layer width, ∝ R0^−½, ∝ throughput^−½; INT8 window = R0 ≤ 288 kΩ @ 10 MOPS or 1 MΩ @ ≤2.9 MOPS (median basis); 0.1 % tolerance or mismatch-aware training;
 - **Scale:** area tax 1 parameter = 1 cell, 27 B @ 45 nm ≈ 1080 cm² (≈126 reticle), @ 3 nm ≈ 11 cm² (1.3 reticle) single-package feasible;
@@ -437,6 +437,7 @@ The most reasonable positioning of this scheme is: **an analog in-memory-computi
 | sim/sim_v6_designspace.py | Full design-space sweep | Area-tax table, power, throughput window |
 | sim/sim_v7_e2e.py | 6-layer MLP end-to-end | Per-layer 0.9997 → final 0.889 (seed-42 single net) |
 | sim/sim_v16_depth_multiseed.py | Multi-seed depth calibration (authoritative) | Final 0.829 ± 0.024 (10 nets); 1MOPS recovery 0.928 |
+| sim/sim_v17_joint_noise.py | Joint temperature × 1/f × drift matrix (on v16 framework) | Near-additive (ratio 0.99–1.02); worst 0.7561 → 0.8365 at 1 MOPS; MOS 1-f largest single term −0.043 |
 | sim/sim_v8_errdecomp.py | Error decomposition | ADC not the bottleneck; noise is |
 | sim/sim_v9_snr.py | Analytic SNR (with self-correction) | Scaling law first version |
 | sim/sim_v10_snr_mc.py | Rigorous Monte-Carlo SNR (authoritative) | W-independent, R0^−½, BW^−½ |
